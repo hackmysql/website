@@ -1,0 +1,32 @@
+{{ define "main" }}
+<div class="res">
+	{{ if eq .Section "tags" }}
+		mysql&gt; SELECT created_at, updated_at, title, subtitle FROM pages WHERE tags LIKE '<span class="kw">{{ strings.TrimPrefix "/tags/" .Path }}</span>' ORDER BY created_at DESC;<br><br>
+	{{ else }}
+		mysql&gt; SELECT created_at, updated_at, title, subtitle FROM pages WHERE type = '<span class="kw">{{ .Section }}</span>' ORDER BY created_at DESC;<br><br>
+	{{ end }}
+<table class="list">
+	<tr>
+		<td>|</td><td>&nbsp;created_at&nbsp;</td><td>|</td><td>&nbsp;updated_at&nbsp;</td><td>|</td><td>&nbsp;title&nbsp;</td><td>|</td><td>&nbsp;subtitle&nbsp;</td><td>|</td><td>&nbsp;tags&nbsp;</td><td>|</td>
+	</tr>
+	{{ $counter := 0 }}
+	{{ range .Pages }}
+		{{ $counter = add $counter 1 }}
+		<tr>
+			<td>|</td>
+			<td>&nbsp;{{ dateFormat "2006-01-02" .Date }}&nbsp;</td>
+			<td>|</td>
+			<td>&nbsp;{{ if ne .Date .Params.Lastmod }}{{ dateFormat "2006-01-02" .Params.Lastmod }}{{ end }}&nbsp;</td>
+			<td>|</td>
+			<td>&nbsp;<a href="{{ .RelPermalink }}">{{ .Title }}</a>&nbsp;</td>
+			<td>|</td>
+			<td>&nbsp;{{ .Params.subtitle }}&nbsp;</td>
+			<td>|</td>
+			<td>&nbsp;{{ if .Params.tags }}{{ delimit .Params.tags ", " }}&nbsp;{{ end }}</td>
+			<td>|</td>
+        </tr>
+	{{ end }}
+</table>
+{{ $counter }} rows in set (0.00 sec)
+</div>
+{{ end }}

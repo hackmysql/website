@@ -1,0 +1,23 @@
+baseURL = "https://hackmysql.com/"
+languageCode = "en-us"
+title = "Hack MySQL"
+disqusShortname = "hackmongo"
+copyright = "2024 Daniel Nichter"
+
+[params]
+  [params.author]
+    name = 'Daniel Nichter'
+
+[taxonomies]
+tag = "tags"
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    noClasses = false
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4

@@ -1,0 +1,22 @@
+<footer>
+	<div><a href="/archive/">Archive</a></div>
+	<div><a href="/about/">About</a></div>
+	<div style="text-align:center">/*&nbsp;No AI was used to write or edit text on this website.&nbsp;Copyright {{ .Site.Lastmod.Format "2006" }} {{ .Site.Params.author.name }}.&nbsp;*/</div>
+	<div><a href="https://github.com/daniel-nichter">github.com/daniel-nichter</a></div>
+</footer>
+<script src="/hackmysql.js"></script>
+{{ if not hugo.IsServer }}
+<script src="https://cdn.usefathom.com/script.js" data-site="WJIYGVMB" data-canonical="false" defer></script>
+<script>
+window.addEventListener('load', (event) => {
+	document.querySelectorAll('.book-button').forEach(item => {
+		item.addEventListener('click', event => {
+			fathom.trackEvent('book ' + item.getAttribute('data-dst') + ' ' + window.location.pathname);
+		});
+	});
+});
+</script>
+{{ if eq .Kind "404" }}
+<script>document.addEventListener('DOMContentLoaded', function() {fathom.trackEvent('404 ' + window.location.pathname);});</script>
+{{ end }}
+{{ end }}

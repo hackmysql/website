@@ -1,0 +1,35 @@
+{{ define "main" }}
+<div class="page">
+	<div id="bird">
+		<img width="120" src="/img/emp-bird.png" alt="Efficient MySQL Performance bird">
+		<p><b><i>Efficient MySQL Performance</i></b><br>20 years of MySQL performance, written for software engineers</p>
+		<a class="book-button" data-dst="oreilly" href="https://oreil.ly/efficient-mysql-performance">O'Reilly&nbsp;&Rang;</a><br>
+		<a class="book-button" data-dst="amazon" href="https://www.amazon.com/Efficient-MySQL-Performance-Practices-Techniques/dp/1098105095/">Amazon &nbsp;&Rang;</a><br>
+		<a class="book-button" data-dst="goodreads" href="https://www.goodreads.com/book/show/59963702-efficient-mysql-performance">Goodreads&nbsp;&Rang;</a>
+	</div>
+	<main>
+		<article>
+			<button type="button" id="focus" onclick="zen()">◯</button>
+			<h1 class="post-title">{{ .Params.title }}</h1>
+			{{ if .Params.subtitle }}<h2 class="post-subtitle">{{.Params.subtitle}}</h2>{{ end }}
+			{{ partial "post_meta.html" . }}
+			{{ $wrappedTable := printf "<div class=\"to\"> ${1} </div>" }}
+			{{ .Content | replaceRE "(<table>(?:.|\n)+?</table>)" $wrappedTable | safeHTML }}
+			<div class="print-copyright">
+				Source: {{ .Permalink }}<br>
+				Copyright {{ .Site.Lastmod.Format "2006" }} {{ .Site.Params.author.name }}
+			</div>
+		</article>
+		{{ partial "disqus.html" . }}
+	</main>
+	<nav id="toc">
+		<div class="scroller">
+			{{ if ne .TableOfContents "<nav id=\"TableOfContents\"></nav>" }}
+			<em><a href="#">{{.Title}}</a></em>
+			<hr>
+			{{ .TableOfContents }}
+			{{ end }}
+		</div>
+	</nav>
+</div>
+{{ end }}

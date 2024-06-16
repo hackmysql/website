@@ -1,0 +1,24 @@
+{{ define "main" }}
+<div class="res">
+mysql&gt; SELECT tag, COUNT(tag) AS count FROM pages GROUP BY tag ORDER BY 2 DESC;<br><br>
+<table class="list">
+	<tr>
+		<td>|</td><td>&nbsp;tag&nbsp;</td><td>|</td><td>&nbsp;count&nbsp;</td><td>|
+	</tr>
+	{{ $counter := 0 }}
+	{{ $data := .Data }}
+    {{ range $key, $value := .Data.Terms.ByCount }}
+		{{ $counter = add $counter 1 }}
+		<tr>
+			<td>|</td>
+			<td>&nbsp;<a href="{{ $value.Name | urlize }}">{{ $value.Name }}</a>&nbsp;</td>
+			<td>|</td>
+			<td>&nbsp;{{ $value.Count }}&nbsp;</td>
+			<td>|</td>
+        </tr>
+	{{ end }}
+</table>
+{{ $counter }} rows in set (0.00 sec)
+</div>
+{{ end }}
+

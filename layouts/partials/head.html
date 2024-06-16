@@ -1,0 +1,26 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{- with .Title | default .Site.Title }}
+  <title>{{ . }}</title>
+  <meta property="og:title" content="{{ . }}">
+{{- end }}
+{{- with .Description | default .Params.subtitle | default .Summary }}
+  <meta name="description" content="{{ . }}">
+  <meta property="og:description" content="{{ . }}">
+{{ else }}
+  <meta name="description" content="Hack MySQL is the personal website of Daniel Nichter, author of the book Efficient MySQL Performance published by O'Reilly. His webiste explores MySQL, Go, and software design.">
+{{- end }}
+  <meta name="author" content="{{ .Site.Params.author.name }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <link rel="icon" href="/img/hack-mysql-favicon.svg">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta property="og:url" content="{{ .Permalink | absLangURL }}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ .Site.Title }}">
+  {{ hugo.Generator }}
+  <link rel="canonical" href="{{ .Permalink | absLangURL }}">
+  <link rel="alternate" href="{{ "index.xml" | absLangURL }}" type="application/rss+xml" title="{{ .Site.Title }}">
+  <link rel="stylesheet" href="{{ "hackmysql.css" | absURL }}">
+</head>

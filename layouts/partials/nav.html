@@ -1,0 +1,64 @@
+<nav id="menu">
+	<a href="/">hack mysql>&nbsp;</a>
+	<div class="menuItem">
+		<button id="design" type="button" class="menuButton" onclick="m('design')">design</button>
+		<div id="designMenu" class="submenu">
+			{{ $t := slice "software design" }}
+			{{ range where .Site.Pages ".Params.tags" "intersect" $t }}
+			<a href="{{ .Permalink }}">{{ .Title }}</a><br>
+			{{ end }}
+			<hr>
+			<div style="line-height:1.2em; margin-top:1em;">
+			<a href="https://www.amazon.com/Philosophy-Software-Design-John-Ousterhout/dp/1732102201"><i><b>A Philosophy of Software Design</b></i><br>by John Ousterhout
+			<img src="/img/philosophy-of-software-design-book-cover.jpeg" width="200" height="245" alt="A Philosophy of Software Design book cover">
+			</a></div>
+		</div>
+	</div>
+	<div class="menuItem">
+		<button id="eng" type="button" class="menuButton" onclick="m('eng')">engineer</button>
+		<div id="engMenu" class="submenu">
+			{{ $pages := where .Site.RegularPages "Section" "eng" }}
+			{{ range sort $pages ".Title" }}
+			<a href="{{ .Permalink }}">{{ .Title }}</a><br>
+			{{ end }}
+		</div>
+	</div>
+	<div class="menuItem">
+		<button id="golang" type="button" class="menuButton" onclick="m('golang')">go</button>
+		<div id="golangMenu" class="submenu">
+			{{ range sort (where .Site.RegularPages "Section" "golang") ".Title" }}
+			<a href="{{ .Permalink }}">{{ .Title }}</a><br>
+			{{ end }}
+		</div>
+	</div>
+	<div class="menuItem">
+		<button id="mysql" type="button" class="menuButton" onclick="m('mysql')">mysql</button>
+		<div id="mysqlMenu" class="submenu">
+			<div class="subtitle">Latest</div>
+				{{ $m := slice "mysql" }}
+				{{ range first 5 (where .Site.Pages ".Params.tags" "intersect" $m) }}
+				<time>{{ .Date.Format "2006-01-02" }}</time>&nbsp;<a href="{{ .Permalink }}">{{ .Title }}</a><br>
+				{{ end }}
+			<div class="subtitle">Most Popular</div>
+				<span class="views">8,428 views</span>
+				<a href="{{ ref . "book-2" }}">MySQL EXPLAIN ANALYZE</a><br>
+				<span class="views">4,549 views</span>
+				<a href="{{ ref . "mysql-threads-running-how-hard-is-mysql-working" }}">MySQL Threads Running: How Hard is MySQL Working?</a><br>
+				<span class="views">3,913 views</span>
+				<a href="{{ ref . "book-5" }}">I Don't Want to Shard (MySQL)</a><br>
+				<span class="views">3,840 views</span>
+				<a href="{{ ref . "commit-latency-aurora-vs-rds-mysql-8.0" }}">COMMIT Latency: Aurora vs. RDS MySQL 8.0</a><br>
+				<span class="views">3,313 views</span>
+				<a href="{{ ref . "are-aurora-performance-claims-true" }}">Are Aurora Performance Claims True?</a><br>
+			<div class="subtitle">Watch and Learn</div>
+				<a href="/path/">An Efficient Path to Learning MySQL Performance</a><br>
+				<a href="https://youtube.com/playlist?list=PLQiYtJSQdSEDH7TCBxm6tgdTc8rbKoX6K&feature=shared" target="_blank">Learn MySQL by PlanetScale</a><br>
+			<div class="subtitle">More Pages</div>
+				<a href="{{ ref . "mysql-password-rotation-lambda" }}">Password Rotation with AWS Secrets Manager and Lambda</a><br>
+				<a href="{{ ref . "mysql-select-and-sort" }}">Select and Sort Status Variables</a><br>
+				<a href="{{ ref . "mysql-transaction-reporting" }}">MySQL Transaction Reporting</a>
+			<hr>
+			<a href="/tags/mysql/">All MySQL Content</a>
+		</div>
+	</div>
+</nav>

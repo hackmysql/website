@@ -1,0 +1,19 @@
+<div class="post-meta">
+	<div>
+		{{ if .Date }}
+			{{ .Date.Format "Jan 2, 2006" }}
+			{{ if ne .Date .Page.Params.Lastmod  }}
+			<img class="ion" src="/img/ionicons/refresh-outline.svg" style="height:0.9em; color:inherit; margin:0">
+			{{ dateFormat "Jan 2, 2006" $.Page.Params.Lastmod }}
+			{{ end }}
+		{{ end }}
+	</div>
+	{{ if .Params.tags }}
+	<div class="blog-tags">
+		{{ range .Params.tags }}
+			<a href="{{ $.Site.LanguagePrefix }}/tags/{{ . | urlize }}">#{{ . }}</a>&nbsp;
+		{{ end }}
+	</div>
+	{{ end }}
+</div>
+
