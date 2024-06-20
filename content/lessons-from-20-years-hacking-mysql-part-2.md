@@ -1,10 +1,9 @@
 ---
-date: "2024-04-20T01:00:00-04:00"
+date: "2024-06-20T10:00:00-04:00"
 title: "Lessons From 20 Years Hacking MySQL (Part 2)"
 subtitle: "Philosophy"
 tags: ["mysql", "philosophy", "history", "business"]
 comments: true
-draft: true
 ---
 
 A relational database is more than a data bank, it's a profound philosophical expression.

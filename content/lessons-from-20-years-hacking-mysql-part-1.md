@@ -1,10 +1,9 @@
 ---
-date: "2024-04-20T00:00:00-04:00"
+date: "2024-06-20T10:01:00-04:00"
 title: "Lessons From 20 Years Hacking MySQL (Part 1)"
 subtitle: "Randomness"
 tags: ["mysql", "philosophy", "history", "business"]
 comments: true
-draft: true
 ---
 
 I vividly remember 2004 when I decided to specialize in MySQL because the year before I was homeless and living in my car.
