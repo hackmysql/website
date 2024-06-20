@@ -36,7 +36,7 @@ What surprises me about the success of MySQL are historical events like:
 * MySQL became the most _popular_ open source database despite not being the most _advanced_ open source database.
 Early versions of MySQL (circa v3.23 and v4.0)  had less features than some alternatives at the time.
 Subqueries and prepared statements didn't appear until v4.1 in 2004.
-Even the default storage engine (MyIASM) was _non_-transactional for many years until bugs and performance issues were ironed out of InnoDB.
+Even the default storage engine (MyISAM) was _non_-transactional for many years until bugs and performance issues were ironed out of InnoDB.
 
 * MySQL was quickly adopted by large tech companies: Yahoo, Google, Facebook, Cisco, and many more.
 Moreover, some of these companies made significant contributions to MySQL&mdash;notably Facebook and Google.
@@ -241,8 +241,8 @@ What's important is that none of them were random or bad luck.
 (One lead developer quit, but that was my fault for not guarding against that risk.)
 
 The history of business is full of successful companies ceasing to be success and ceasing _to be_.
-Like Sun Microsystems: it was successful enough to acquire MySQL for a **billion** dollars.
-Maybe MySQL would have done well at Sun, but we'll never know because a mere 2 years later Oracle acquired Sun for 7.4 billion dollars.
+Like Sun Microsystems: it was successful enough to acquire MySQL for 1 **billion** dollars.
+Maybe MySQL would have done well at Sun, but we'll never know because a mere two years later Oracle acquired Sun for 7.4 billion dollars.
 
 The last 20 years of my career exhibit the ups and downs that demonstrate how past success guarantees nothing:
 
@@ -293,7 +293,7 @@ Even after 20+ years in tech, I'm honestly not sure what the industry values: fr
 Probably both... because both are good.
 I think tech hasn't quite figured out yet how to merge the two.
 Now that I'm on the right side of that "or", this is a poignant issue for me.
-But change starts with awareness.
+Change starts with awareness.
 
 ## Failure is rarely one event
 
@@ -306,20 +306,23 @@ But in my experience, they never formed a series of failures that became so irks
 
 This is good news for other companies and products because it removes the burden and expectation of perfection.
 (Perfection is an unrealistic expectation in any case.)
-Users are very forgiving as long as the product has a track record of delivering value and the serious flaws are quickly verified and fixed.
+Users are patient and forgiving as long as a company maintains a track record of delivering value, fixing problems quickly, and working to benefit the customers not the bottom line.[^5]
+
+[^5]: I've spent 16 of the last 20 years at two companies: Percona and Block (fka Square)&mdash;8 years each.
+Among many reasons, a critical one for me is that both companies truly work for their customers' benefit.
+
 
 Especially during my early years hacking MySQL, its flaws were openly discussed and quickly fixed.
 MySQL, big tech companies, Percona, and the open source community all helped drive its rapid progress, which made its failures rapidly forgotten.
 I've never seen anything like it since, but I hope I do again.
 
-
 The bad news: failure is a slow-moving problem that's difficult to detect before it's too late because it never seems imminent.
 
 This has not happened to MySQL yet, but the history of tech is full of such stories: Gateway Computers, AOL, Yahoo, MySpace, Napster, Netscape, Borland, BlackBerry...
-Even Apple failed to [Wintel](https://en.wikipedia.org/wiki/Wintel) until Steve Jobs came back and turned it around.[^5]
+Even Apple failed to [Wintel](https://en.wikipedia.org/wiki/Wintel) until Steve Jobs came back and turned it around.[^6]
 And at the moment, Boeing has _fallen_ from grace (emphasis on a grim pun).
 
-[^5]: Then Microsoft failed to Apple on music players and smartphones. I don't think I've ever seen a Zune player.
+[^6]: Then Microsoft failed to Apple on music players and smartphones. I don't think I've ever seen a Zune player.
 
 In all cases, it took time to fail.
 Or worse: not fail entirely but become a shell of its former glory, a zombie business that makes people say "How is _that_ company still in business!?"
@@ -344,10 +347,10 @@ Middle managers can't.
 For brevity, I'll omit a large amount of nuance on this topic and, instead, deliver the point and advice for engineers: <mark>don't burn out trying to fix a business that you're not empowered to fix</mark>.
 
 I've seen more than a few good engineers burn out this way.
-Learning how to raise issues and call out problems _without_ being be labeled a naysayer or obstructionist is a difficult skill to master.[^6]
+Learning how to raise issues and call out problems _without_ being be labeled a naysayer or obstructionist is a difficult skill to master.[^7]
 As an engineer who builds and fixes things, the temptation to fix the business is powerful, but until you have that skill, tread very lightly and hold onto your [magical shield](#shield).
 
-[^6]: Rule #1 for raising issues or calling out problems without being be labeled a naysayer or obstructionist: _offer realistic solutions or ways to improve_.
+[^7]: Rule #1 for raising issues or calling out problems without being be labeled a naysayer or obstructionist: _offer realistic solutions or ways to improve_.
 
 ---
 

@@ -18,7 +18,7 @@
 			<td>|</td>
 			<td>&nbsp;{{ if ne .Date .Params.Lastmod }}{{ dateFormat "2006-01-02" .Params.Lastmod }}{{ end }}&nbsp;</td>
 			<td>|</td>
-			<td>&nbsp;<a href="{{ .RelPermalink }}">{{ .Title }}</a>&nbsp;</td>
+			<td>&nbsp;<a href="{{ .Path }}">{{ .Title }}</a>&nbsp;</td>
 			<td>|</td>
 			<td>&nbsp;{{ .Params.subtitle }}&nbsp;</td>
 			<td>|</td>

@@ -46,12 +46,12 @@ I rarely find that intentional effort in other software engineers.
 When I ask or bring up the issue, the reply is almost always dismissive, like "It's good enough" or "Yeah but is anything _technically_ wrong?"
 
 I think the tech industry is at a turning point.
-For the past 30+ years (back to the 1990s), merely being able to program&mdash;to deliver working code&mdash;was a path to success.
+For the past 30 years (back to the 1990s), merely being able to program&mdash;to deliver working code&mdash;was a path to success.
 But the party ended with a final hurrah from 2020&ndash;2022: the pandemic-era tech hiring frenzy and stock bubble.
 
-But now the opposite is sweeping the industry: massive layoffs, limited jobs, tough competition, and&mdash;to top it all off&mdash;_reduced_ total compensation.
+Now the opposite is sweeping the industry: massive layoffs, limited jobs, tough competition, and&mdash;to top it all off&mdash;_reduced_ total compensation.
 
-I predict that the next 20 years of tech will favor those who put in intentional effort to deliver quality code and programs in every aspect.
+I predict that the next 30 years of tech will favor those who put in intentional effort to deliver quality code and programs in every aspect.
 Not only is coding a commonplace skill that even children are taught, but AI is learning to code, too.
 If coding is no longer the differentiator, then what is?
 Quality.
@@ -117,7 +117,7 @@ I'll tell you a funny story that I don't think Peter Zaitsev will mind me sharin
 Peter and Vadim, like most early Percona employees, defaulted to maximum effort.
 We were passionate about MySQL and MySQL performance, so we always dug&mdash;all the way to bedrock.
 At some meeting, Peter was extolling the importance of this effort, and he meant to say "Dig in layer by layer".
-But with his accent at the time it sounded like "Dig in lawyer by lawyer."
+But it sounded like he said "Dig in lawyer by lawyer."
 T-shirts were made up with his face saying this.
 
 Again, I get it: probably not much incentive to put in this kind of effort today.

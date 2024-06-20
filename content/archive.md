@@ -4,6 +4,7 @@ summary: "The HackMySQL archives"
 aliases:
   - /mysqlreport
   - /mysqlreportdoc
+  - /mysqlreportguide
   - /mysqlsla
   - /mysqlsla_guide
   - /mysqlsniffer
@@ -37,7 +38,7 @@ Rather than leaving you stranded on a 404 page, this archive provides alternativ
 
 ## Tools
 
-The <a href="https://github.com/daniel-nichter/hackmysql.com/tree/master">original tools</a> I wrote (circa 2004&ndash;2008) are deprecated, unmaintained, and unsupported.
+The <a href="https://github.com/hackmysql/archive/">original tools</a> I wrote (circa 2004&ndash;2008) are deprecated, unmaintained, and unsupported.
 Use an alternative tool.
 
 |Original Tool|Alternatives|
@@ -64,6 +65,7 @@ It's up to date, covers the same topics (in chapter 2), and teaches a lot more.
 
 * nontech/ Non-technical Guide to Isolating Slow MySQL Queries
 * joinrows/ JOIN Rows Produced vs. Rows Read
+* dns/ MySQL DNS Details
 
 Sorry to repeat myself but, read my book: [_Efficient MySQL Performance_](https://oreil.ly/efficient-mysql-performance).
 Original guides and other content on this website are captured in book, which is far more comprehensive and up to date.

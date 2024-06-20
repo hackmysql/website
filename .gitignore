@@ -2,3 +2,5 @@ public/
 *.swp
 .DS_Store
 *.json
+.hugo_build.lock
+out.json
