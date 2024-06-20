@@ -30,7 +30,7 @@ Fun fact: `mysqlreport` still gets a lot of hits even though it was retired and 
 Today, when I find myself in the churn, I ask myself "How can I add _value_?"
 
 The answer changes with time, experience, opportunities, and so forth.
-Generally speaking, the further along in your career, the more _impact_ your can have, and greater impact leads to greater value.
+Generally speaking, the further along in your career, the more _impact_ you can have, and greater impact leads to greater value.
 During my entire tech career, I've observed and learned three sure-fire ways to increase your impact and value:
 
 1. Deliver quality
@@ -115,8 +115,7 @@ I'll tell you a funny story that I don't think Peter Zaitsev will mind me sharin
 
 Peter and Vadim, like most early Percona employees, defaulted to maximum effort.
 We were passionate about MySQL and MySQL performance, so we always dug&mdash;all the way to bedrock.
-At some meeting, Peter was extolling the importance of this effort, and he meant to say "Dig in layer by layer".
-But it sounded like he said "Dig in lawyer by lawyer."
+At some meeting, Peter was extolling the importance of this effort, and he meant to say "Dig in layer by layer", but it sounded like he said "Dig in lawyer by lawyer."
 T-shirts were made up with his face saying this.
 
 Again, I get it: probably not much incentive to put in this kind of effort today.
@@ -177,7 +176,7 @@ Look around you and ask "What's difficult?"
 Then imagine a world and way in which people are doing that easily.
 Build that vision and change the world.
 
-MySQL did.
+MySQL did it.
 You can too.
 
 <br>

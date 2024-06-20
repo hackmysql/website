@@ -152,7 +152,7 @@ If biasing towards success sounds like a "pick yourself up by the bootstrap" cli
 After awhile, success comes easily because you're a high-level player.
 
 Real life is surprising like a video game.
-Success is possible; it's even programmed into the "game" because most people and most of the world want you to succeed.
+Success is possible; it's even programmed into the "game" because most people and most of the world wants you to succeed.
 But there are definitely enemies and bosses&mdash;competition and people who don't want you to succeed&mdash;which is why success takes work.
 
 <p class="note">
