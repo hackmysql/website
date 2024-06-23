@@ -198,7 +198,7 @@ It will protect you from every attack at work.
 It will attract all the best people and opportunities to you.
 Hold on to it.
 
-<div style="text-align:center"><img src="/img/ionicons/shield-outline.svg" style="height:2rem; display:inline;"></div>
+<div style="text-align:center"><img src="/img/ionicons/shield-outline.svg" style="height:2rem; display:inline;" alt="shiedl"></div>
 
 Success and failure are not random.
 Randomness is only part of success.

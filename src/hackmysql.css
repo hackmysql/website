@@ -456,6 +456,12 @@ div.scroller {
   .sidebyside { flex-direction: column; }
 }
 
+.footnote-backref {
+  font-size: 1.2em;
+  text-decoration: none;
+  vertical-align: text-top;
+}
+
 /* footer */
 footer {
   margin-top: 2rem;
