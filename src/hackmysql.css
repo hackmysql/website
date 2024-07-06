@@ -209,7 +209,6 @@ div.footnotes { margin-top: 1rem; }
 /* book */
 div.my-book-cover { text-align: center; margin-top: 1rem; }
 img.my-book-cover {
-  width: 300px;
   margin: auto;
   margin-bottom: 2rem;
   box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 50%);
@@ -237,7 +236,7 @@ img.my-book-cover {
 }
 .book-button:hover, .book-button:focus {color: white; text-decoration: none;}
 .my-book-desc { text-align: justify; }
-div.book-covers img { height: 150px; display: inline-block; margin: 0.5rem; }
+div.book-covers img { display: inline-block; margin: 0.5rem; }
 
 /* toc */
 nav a { text-decoration: none; }
