@@ -239,7 +239,7 @@ The specifics of those five don't matter.
 What's important is that none of them were random or bad luck.
 (One lead developer quit, but that was my fault for not guarding against that risk.)
 
-The history of business is full of successful companies ceasing to be success and ceasing _to be_.
+The history of business is full of successful companies ceasing to be successful and ceasing _to be_.
 Like Sun Microsystems: it was successful enough to acquire MySQL for 1 **billion** dollars.
 Maybe MySQL would have done well at Sun, but we'll never know because a mere two years later Oracle acquired Sun for 7.4 billion dollars.
 

@@ -284,7 +284,7 @@ For example, it happened to some developers where I work with LIMIT 21 and a tab
 </p>
 
 But of course, every row access has some cost, so `x` is divided by a value I don't understand (see &Dagger; above) and multiplied by an access cost that takes into account several other factors beyond the scope of this blog post.
-For example, MySQL knows if a page is in memory (lost cost memory access) or not (high cost storage I/O).
+For example, MySQL knows if a page is in memory (low cost memory access) or not (high cost storage I/O).
 
 The end result is an index scan cost that can be compared to the original read cost, and (apart from several other conditionals) that's exactly what the code does: `index_scan_time < read_time`.
 (The variables are called "time" but they're not really time, they're unit-less costs.)
