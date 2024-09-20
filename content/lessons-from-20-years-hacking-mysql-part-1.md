@@ -4,6 +4,9 @@ title: "Lessons From 20 Years Hacking MySQL (Part 1)"
 subtitle: "Randomness"
 tags: ["mysql", "philosophy", "history", "business"]
 comments: true
+series: "20 Years Hacking MySQL"
+params:
+  reverseSeries: true
 ---
 
 I vividly remember 2004 when I decided to specialize in MySQL because the year before I was homeless and living in my car.
