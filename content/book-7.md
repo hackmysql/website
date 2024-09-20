@@ -8,6 +8,7 @@ comments: true
 aliases:
   - /post/book-7/
 disqus_url: "https://hackmysql.com/post/book-7/"
+series: "Behind the Book"
 ---
 
 We've been measuring MySQL replication lag with heartbeats for more than a decade.

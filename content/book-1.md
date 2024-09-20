@@ -7,6 +7,7 @@ comments: true
 aliases:
   - /post/book-1/
 disqus_url: "https://hackmysql.com/post/book-1/"
+series: "Behind the Book"
 ---
 
 Editors and technical reviewers suggested that I cover how to configure MySQL query metrics in chapter 1 of [_Efficient MySQL Performance_](https://oreil.ly/efficient-mysql-performance), but I deferred because it was out of scope for the book, which focuses on engineers _using_ MySQL, not DBAs.

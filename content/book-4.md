@@ -8,6 +8,7 @@ comments: true
 aliases:
   - /post/book-4/
 disqus_url: "https://hackmysql.com/post/book-4/"
+series: "Behind the Book"
 ---
 
 Access patterns intrigue me because it seems that everyone knows what they are and talks about them, but there's also very little written about them&mdash;in MySQL literature, at least.

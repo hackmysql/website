@@ -24,10 +24,31 @@
 	</main>
 	<nav id="toc">
 		<div class="scroller">
+			{{ if .Params.series }}
+				{{ .Params.series }} Series
+				<hr>
+				<div style="display:flex; flex-wrap:wrap; gap:1em; margin-bottom:2rem;">
+				{{ $thisPage := .Title }}
+				{{ $n := 1 }}
+				{{ $pages := sort (index .Site.Taxonomies.series (lower .Params.series)) "Date" "asc" }}
+				{{ $p0 := index $pages 0 }}
+				{{ if eq $p0.Params.zeroIndex true }}{{ $n = 0 }}{{ end }}
+				{{ range $pages }}
+					{{ if eq .LinkTitle $thisPage }}
+					<span style="border-bottom:2px solid hotpink;">{{ $n }}</span>
+					{{ else }}
+					<a href="{{ .RelPermalink }}">{{ $n }}</a>
+					{{ end }}
+					{{ $n = add $n 1 }}
+				{{ end }}
+				</div>
+			{{ end }}
 			{{ if ne .TableOfContents "<nav id=\"TableOfContents\"></nav>" }}
 			<em><a href="#">{{.Title}}</a></em>
 			<hr>
 			{{ .TableOfContents }}
+			{{ else if .Params.series }}
+			<em><a href="#">{{.Title}}</a></em>
 			{{ end }}
 		</div>
 	</nav>

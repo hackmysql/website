@@ -8,6 +8,7 @@ comments: true
 aliases:
   - /post/book-6/
 disqus_url: "https://hackmysql.com/post/book-6/"
+series: "Behind the Book"
 ---
 
 Who dares diagram a system and process as complex as InnoDB page flushing?

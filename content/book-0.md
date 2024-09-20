@@ -8,6 +8,9 @@ comments: true
 aliases:
   - /post/book-0/
 disqus_url: "https://hackmysql.com/post/book-0/"
+series: "Behind the Book"
+params:
+  zeroIndex: true
 ---
 
 After 17 years with MySQL, I wrote a book: [_Efficient MySQL Performance_](https://oreil.ly/efficient-mysql-performance).
