@@ -168,7 +168,7 @@ div.blog-tags a:hover { text-decoration: underline; }
 h2 + .note {
   margin-top: 1em;
 }
-.warn {
+.note.warn {
   background-color: #ffdfdf;
   border-color: red;
   text-align: justify;
@@ -194,6 +194,11 @@ p.figure {
   color: #666666;
 }
 div.footnotes { margin-top: 1rem; }
+div.footnotes > ol {
+  margin-top: 1rem;
+  font-size: 0.8em;
+  padding-left: 1rem;
+}
 .tag {
   border-radius: 25px;
   border: 1px solid black;
@@ -459,9 +464,9 @@ div.scroller {
 }
 
 .footnote-backref {
-  font-size: 1.2em;
+  font-size: 1.3em;
   text-decoration: none;
-  vertical-align: text-top;
+  vertical-align: bottom;
 }
 
 /* footer */
