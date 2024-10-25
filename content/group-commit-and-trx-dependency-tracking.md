@@ -1,5 +1,6 @@
 ---
 date: "2024-10-20T22:35:00-04:00"
+lastMod: "2024-10-24T20:32:00-04:00"
 title: "Group Commit and Transaction Dependency Tracking"
 subtitle: "Towards Multi-threaded Replication"
 tags: ["mysql", "replication", "group-commit", "logical-clock", "writeset"]
@@ -105,8 +106,19 @@ There's no definitive answer, no best practice, no industry standard.[^1]
 
 MySQL expert Jean-François (J-F) Gagné has probably tested, written, and presented more on this than anyone else, like [A Metric for Tuning Parallel Replication in MySQL 5.7](https://jfg-mysql.blogspot.com/2017/02/metric-for-tuning-parallel-replication-mysql-5-7.html) and various conference presentations you can find online.
 The TL;DR is: the longer MySQL waits, the more transactions it can group together.
+However, to be clear...
 
-To deeply understand group commit and how it ties into multi-threaded replication, it's necessary to first understand the transaction (trx) commit process because it's all woven together.
+<mark>As of MySQL v5.7.6, transaction dependency tracking and MTR do _not_ depend on binary log group commit.</mark>
+
+I highlight the previous because there can be confusion and wrong information for two reasons.
+First, logical clock [v1](#v1) coupled trx dependency tracking, BGC, and MTR for a few versions (v5.7.2&ndash;v5.7.5 inclusive), but this stopped being true more than 9 years ago.
+Second, as [diagram 1](#diagram-1) shows (below), trx dependency tracking happens during BGC, which is still true as of MySQL 9.0, but <u>group commit does not determine transaction dependency</u>.
+Transaction dependency is first identified by [locking intervals](#locking-interval) on commit, then enhanced by [writesets](#writeset).[^9]
+
+[^9]: However, on MySQL 8.0 if you don't explicitly configure `binlog_transaction_dependency_tracking = WRITESET`, then BGC size affects max committed values, which become `last_committed` values, which affect when a replica can execute a trx in parallel.
+But see [System Variables Removed](#sysvars-removed).
+
+That said, to deeply understand group commit and how it ties into multi-threaded replication, it's necessary to first understand the transaction (trx) commit process because it's all woven together.
 
 ### Trx Commit Process
 
@@ -140,7 +152,11 @@ To disambiguate this conflation of the term "commit",[^3] let's use:
 Statement commits are important because they start (or restart) the [locking interval](#locking-interval) described later.
 But for now, let's focus on the trx commit process that's executed by one or more threads concurrently:
 
+<a name="diagram-1">
+
 ![MySQL Transaction Commit Process with Binary Log Group Commit](/img/binary_log_group_commit.jpg)
+
+</a>
 
 <p class="figure">Diagram 1: MySQL transaction commit process with binary log group commit</p>
 
@@ -321,8 +337,7 @@ But once `c1` has committed, then `c2` prepares and begins BGC at t=6 with `e1` 
 
 ### Locking Interval
 
-In the example above, trx `a1, b1, c1, d1, e1` can execute in parallel on a replica because they committed together on the source.
-The reason is important: the transactions don't have conflicting [locking intervals](https://dev.mysql.com/worklog/task/?id=7165):
+In the example above, trx `a1, b1, c1, d1, e1` can execute in parallel on a replica because they don't have conflicting [locking intervals](https://dev.mysql.com/worklog/task/?id=7165):
 
 > the locking interval for multi-statement transactions begins at the end of the last statement before commit.
 
@@ -352,7 +367,7 @@ The general term for this is _transaction dependency tracking_, and MySQL uses t
 Both are based on a logical clock&mdash;you'll learn why later.
 
 <div class="note warn">
-<b>System Variables Removed</b><br>
+<a name="sysvars-removed"><b>System Variables Removed</b></a><br>
 The following sysvars related to transaction dependency tracking were removed in MySQL 8.4:
 <ul>
 <li><code>binlog_transaction_dependency_tracking</code></li>
@@ -379,7 +394,7 @@ MySQL uses a logical clock and commit order for transaction dependency tracking.
 The logical clock counts transaction as they're written into the binary logs during the [trx commit process](#trx-commit-process).
 
 Transaction dependency tracking determines _if_ transactions can execute in parallel.
-Logical clocks determines _when_ transactions can execute in parallel, _if_ they can.
+Logical clock determines _when_ transactions can execute in parallel, _if_ they can.
 
 <div class="note">
 <b>Depends and Conflicts</b><br>
@@ -409,7 +424,7 @@ MySQL logical clock [v1](https://dev.mysql.com/worklog/task/?id=6314) was very s
 As such, only trx in the same group commit&mdash;with the same commit parent value&mdash;could execute in parallel.
 This worked but it limited parallelization (v2 and writesets will show why).
 
-Suppose that a binary log contains:
+Suppose that a binary log contained:
 
 ```
 commit_parent=0 trx 3
@@ -419,7 +434,7 @@ commit_parent=3 trx 6
 commit_parent=3 trx 7
 ```
 
-With v1, trx 5 can execute in parallel only with trx 3 and 4 because these three trx have the same `commit_parent` value: zero.
+With v1, trx 5 could execute in parallel only with trx 3 and 4 because these three trx had the same `commit_parent` value: zero.
 So a replica with four applier threads would execute trx 3, 4, 5, and wait&mdash;the fourth applier thread would idle.
 When all trx with `commit_parent=0` were done, the replica would proceed to the next group commit parent.
 
@@ -467,6 +482,20 @@ The crucial difference between logical clock v1 and v2 is that that v1 did not l
 Conflicts weren't really identified, they were avoided by parallelizing trx only in the same group commit.
 But v2 looks back in logical time&mdash;across group commits&mdash;to identify the soonest a trx can execute in parallel, which is after the last conflicting transaction.
 
+"Looks back" is figurative; in technical terms, here what's happening on both sides of replication:
+
+Source
+: The last statement in a trx (before `COMMIT`) gets the max committed trx sequence number.
+This becomes the `last_committed` value of the trx, paired with its `sequence_number`&mdash;both set during the flush stage and recorded in the binary logs.
+(See [diagram 1](#diagram-1).)
+In this sense, each trx looks back when it fetches the max committed value because that value was set by earlier transactions in the commit stage.
+The purpose is _not_ to identify group commits but rather [locking intervals](#locking-interval): when a trx enters the prepare phase, its locks cannot conflict with the last committed trx (else it wouldn't have been able to enter the prepare phase).
+
+Replica
+: For each trx, a replica preforms the check previously stated: trx `T` can execute in parallel if the `sequence_number` of the _oldest_ trx that's executing is greater than the `last_committed` of `T`.
+In this sense, a replica looks back to check the oldest trx that's still running.
+Again, it's not a matter of group commit, it's a matter of [locking intervals](#locking-interval).
+
 Logical clock v2 is pretty good but [writesets are better](https://dev.mysql.com/blog-archive/improving-the-parallel-applier-with-writeset-based-dependency-tracking/) because 
 they allow MySQL to look even further back in logical time by determining conflicts more precisely.
 
@@ -479,7 +508,7 @@ For example:
   last_committed=1 sequence_number=14 <= trx 1 committed alone
 </pre>
 I'm pretty sure that's wrong: trx 1&ndash;13 committed together because they have the same commit parent: <code>last_committed=0</code>.<br><br>
-Also, the statement "if you want the replica to apply transactions in parallel, there must be group commits on the primary" is not accurate because, with MySQL logical clock v2, it's possible for transactions with different commit parents to execute in parallel.
+Also, the statement "if you want the replica to apply transactions in parallel, there must be group commits on the primary" is not accurate because, with MySQL logical clock v2 and writesets, it's possible for transactions with different commit parents to execute in parallel.
 As such, there can be parallelization even if every transaction commits alone.
 </div>
 
