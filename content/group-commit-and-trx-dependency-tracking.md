@@ -1,6 +1,6 @@
 ---
 date: "2024-10-20T22:35:00-04:00"
-lastMod: "2024-10-24T20:32:00-04:00"
+lastMod: "2024-10-26T15:30:00-04:00"
 title: "Group Commit and Transaction Dependency Tracking"
 subtitle: "Towards Multi-threaded Replication"
 tags: ["mysql", "replication", "group-commit", "logical-clock", "writeset"]
@@ -11,7 +11,7 @@ series: "Replication Lag"
 MySQL 8.0 and newer change and improve how we measure and monitor replication lag.
 Even though multi-threaded replication (MTR) has been on by default for the last three years (since [v8.0.27](https://dev.mysql.com/doc/relnotes/mysql/8.0/en/news-8-0-27.html) released October 2021), the industry has been steeped in single-threaded replication for nearly _30_ years.
 As a result, replication lag with MTR is a complicated topic because it depends on version, configuration, and more.
-This three-part series provides a detailed understanding, starting from what was originally an unrelated feature but is now the basis: binary log group commit.
+This three-part series provides a detailed understanding, starting from what was originally an unrelated feature: binary log group commit.
 
 <!-- more -->
 
