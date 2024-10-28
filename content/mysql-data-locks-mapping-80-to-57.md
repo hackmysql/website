@@ -1,11 +1,9 @@
 ---
-type: "page"
 date: "2021-07-26T15:40:00-04:00"
 title: "MySQL Data Locks: Mapping 8.0 to 5.7"
 tags: ["mysql", "data-locks"]
 aliases:
   - /mysql-data-locks
-aliases:
   - /post/mysql-data-locks-mapping-80-to-57/
 ---
 

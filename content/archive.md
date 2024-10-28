@@ -20,6 +20,9 @@ aliases:
   - /case5
   - /nontech
   - /tools
+  - /dns
+  - /joinrows
+  - /dbnormal
 ---
 
 <style>
@@ -66,6 +69,7 @@ It's up to date, covers the same topics (in chapter 2), and teaches a lot more.
 * nontech/ Non-technical Guide to Isolating Slow MySQL Queries
 * joinrows/ JOIN Rows Produced vs. Rows Read
 * dns/ MySQL DNS Details
+* dbnormal/ Database Normal Forms
 
 Sorry to repeat myself but, read my book: [_Efficient MySQL Performance_](https://oreil.ly/efficient-mysql-performance).
 Original guides and other content on this website are captured in book, which is far more comprehensive and up to date.
