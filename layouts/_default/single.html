@@ -37,6 +37,7 @@
 				{{ else }}
 					{{ $pages = sort $pages "Date" "asc" }}
 				{{ end }}
+				{{ $p0 = index $pages 0 }}
 				{{ if eq $p0.Params.zeroIndex true }}{{ $n = 0 }}{{ end }}
 				{{ range $pages }}
 					{{ if eq .LinkTitle $thisPage }}
