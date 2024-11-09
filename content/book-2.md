@@ -27,7 +27,7 @@ The full list is <a href="/tags/efficient-mysql-performance/">tags/efficient-mys
 
 Slide 9 of ["MySQL 8.0 EXPLAIN ANALYZE" by Norvald Ryeng](https://www.slideshare.net/NorvaldRyeng/mysql-80-explain-analyze) enumerates and illustrates how the MySQL query executor changed in 8.0:
 
-![Slide 9](/img/slide-9-ryeng.png)
+![Slide 9](/img/slide-9-ryeng.jpg)
 
 Before MySQL 8.0, instrumenting steps in a query execution plan was infeasible because the code was scattered and heterogeneous.
 As of MySQL 8.0, instrumenting steps in a query execution plan is trivial because each step is essentially the same thing: an iterator.
