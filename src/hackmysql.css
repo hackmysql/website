@@ -173,7 +173,7 @@ h2 + .note {
   border-color: red;
   text-align: justify;
 }
-.warn > a { color:black; text-decoration:none; }
+.warn > a, a:has(.figure) { color:black; text-decoration:none; }
 .left-icon {display:flex; align-items:center;}
 .left-icon > img {float:left; margin-right:1rem;}
 .note.warn.left-icon {padding-left: 1rem;}

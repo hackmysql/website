@@ -166,7 +166,7 @@ And it's all extensively documented: https://square.github.io/finch/
 
 Benchmarking is difficult, even for experts.
 But ideally it's something software developers can do and actually do.
-To help make that reality is another reason why I wrote Finch&mdash;and the page [Benchmarking]({{< ref "benchmarking" >}}).
+To help make that reality is another reason why I wrote Finch&mdash;and the page [Benchmarking]({{< ref "eng/benchmarking" >}}).
 
 I've already seen it in action once: where I work, a team of software engineers used Finch to recreate the critical part of their app's workload.
 They benchmarked one database environment versus another and found the other had latency the app couldn't handle.

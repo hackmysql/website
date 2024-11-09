@@ -8,14 +8,14 @@ alaises:
   - /post/response-time-sla/
 ---
 
-Response time [percentiles]({{< ref "percentiles" >}}) are a ubiquitous measure of system performance.
+Response time [percentiles]({{< ref "eng/percentiles" >}}) are a ubiquitous measure of system performance.
 The P999 (99.9th percentile) is a high bar, so it's a good metric to determine a service level objective (SLO).
 For example, my team runs a system with a P999 &leq; 800 millisecond SLO.
 The system meets the SLO, but here's its P999 graph:
 
 ![Query SLO P999 Chart](/img/query-sla-p999-chart.png)
 
-Looks bad, but the system _is_ meeting the SLO. To understand why, let's look at how percentiles are calculated. The [Percentiles]({{< ref "percentiles" >}}) page on this site is a longer, more technical read about the subject, but for our purposes here the TL;DR is: <mark>a percentile is a high water mark.</mark> Consider a literal high water mark:
+Looks bad, but the system _is_ meeting the SLO. To understand why, let's look at how percentiles are calculated. The [Percentiles]({{< ref "eng/percentiles" >}}) page on this site is a longer, more technical read about the subject, but for our purposes here the TL;DR is: <mark>a percentile is a high water mark.</mark> Consider a literal high water mark:
 
 ![High water mark (Lake Mead) Source: durangoherald.com](/img/high-water-mark.jpg)
 

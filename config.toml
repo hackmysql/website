@@ -4,6 +4,10 @@ title = "Hack MySQL"
 disqusShortname = "hackmongo"
 copyright = "2024 Daniel Nichter"
 
+[services]
+  [services.disqus]
+    shortname = 'hackmongo'
+
 [params]
   [params.author]
     name = 'Daniel Nichter'
