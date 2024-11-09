@@ -1,10 +1,9 @@
 ---
-type: "page"
 date: "2022-02-27T14:28:00-05:00"
 title: "MySQL EXPLAIN ANALYZE"
 subtitle: "Chapter 2"
 tags: ["mysql", "explain", "book", "efficient-mysql-performance"]
-comments: true
+comments: false
 lastmod: "2023-02-18T13:23:00-05:00"
 aliases:
   - /post/book-2/
