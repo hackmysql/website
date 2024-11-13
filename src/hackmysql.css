@@ -70,7 +70,7 @@ mark {
 .read-more { font-style: italic; text-align: right; }
 
 /* table */
-div.to { overflow-x: scroll; } /* table overflow */
+div.to { overflow-x: auto; } /* table overflow */
 :is(h1,h2,h3,h4) + div.to > table { margin-top: 1em; }
 table {
   margin: 0;
@@ -107,7 +107,7 @@ table tr td :last-child {
 div.res {
   width: 100%;
   font-family: 'Courier';
-  overflow: scroll;
+  overflow: auto;
   padding: 1rem;
 }
 table.list {
@@ -208,7 +208,7 @@ div.footnotes > ol {
 }
 .withshadow { box-shadow: 0 4px 8px 0 rgb(0 0 0 / 40%); }
 .rounded { border-radius: 20px; }
-.highlight { overflow: scroll; }
+.highlight { overflow: auto; }
 .sidebyside {
   display: flex;
   gap: 0.5rem;
@@ -255,7 +255,7 @@ nav#toc {
 }
 nav#toc a { color: black; }
 nav#toc a:hover { text-decoration: underline; }
-nav#toc ul { padding: 0; }
+nav#toc ul { padding: 0; list-style-type: none; }
 nav#toc nav > ul > li { /* each section: h1 + subs */
   margin-bottom: 1rem;
 }
@@ -365,7 +365,6 @@ nav#toc {
   align-self: start;
 }
 div.scroller {
-  overflow-y: scroll;
   padding-top: 2rem;
   height: 100vh;
 }
@@ -523,7 +522,7 @@ pre {
   padding: 0.5em;
   padding-right: 2em;
   width: 100%;
-  overflow-x: scroll;
+  overflow-x: auto;
   border-radius: 5px;
   background-color: #f5f5f5; /* generic pre ``` */
   font-size: 13px;
