@@ -555,5 +555,4 @@ I wonder if it even needs `sequence_number` because transactions can be identifi
 But as of MySQL 9.0, the code for binary log group commit, logical clock, and writeset are still intertwined.
 
 Writeset is great for multi-threaded replication because it identifies much more parallelization than commit order.
-But ironically another feature called "replica preserve commit order" reduces the net benefits by requiring transactions to commit in the same order as the source.
-This is the subject of the forthcoming part 2 of this series...
+But with parallelization comes another consideration called _replica preserve commit order_ (RPCO), which is the focus of [part 2]({{< ref "replica-preserve-commit-order" >}}) of this series.

@@ -168,6 +168,7 @@ div.blog-tags a:hover { text-decoration: underline; }
 h2 + .note {
   margin-top: 1em;
 }
+div.note > a > b {color:black}
 .note.warn {
   background-color: #ffdfdf;
   border-color: red;
