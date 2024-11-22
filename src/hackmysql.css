@@ -366,6 +366,7 @@ nav#toc {
   align-self: start;
 }
 div.scroller {
+  overflow-y: auto;
   padding-top: 2rem;
   height: 100vh;
 }
