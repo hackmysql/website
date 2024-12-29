@@ -1,5 +1,6 @@
 ---
 date: "2024-11-21T19:01:00-05:00"
+lastMod: "2024-12-22T15:08:00-04:00"
 title: "Replica Preserve Commit Order and Measuring Lag"
 tags: ["mysql", "replication", "lag", "preserve-commit-order"]
 comments: true
@@ -22,7 +23,7 @@ This is a three-part series on replication lag with MTR and the Performance Sche
 |2|Replica preserve commit order (RPCO)|
 |3|Monitoring MTR lag with the Performance Schema|
 
-Links to each part (once they're published) are in the upper right &nearr; (or top on small screens).
+Links to each part are in the upper right &nearr; (or top on small screens).
 This part presumes you've read part 1.
 
 <div class="note">
@@ -150,7 +151,7 @@ Transaction gaps are a challenge for replication lag: is the lag 8s (measured fr
 ([Recall](#diagram-conventions) that each trx takes 1s to execute and trx 10 represents the current time.)
 DBAs tend to agree that the conservative, low watermark is the better answer: 8s.
 
-<mark>With MTR, replication lag is measured from the _oldest_ applying (or applied) transaction.</mark>
+<mark>With MTR, replication lag is measured from the _oldest_ applying (or last applied) transaction.</mark>
 There's additional nuance to this approach that part 3, once published, will explain.
 
 Without careful consideration of application logic, `replica_preserve_commit_order = OFF` is _not_ a safe assumption.
@@ -322,4 +323,4 @@ Have you?
 
 To investigate further and better, MTR metrics and instrumentation are needed.
 It'd be really nice if there was a status variable like `Repl_commit_order_waits`, but there isn't.
-The forthcoming part 3 of this series will look at what metrics and instrumentation are available, especially in terms of monitoring replication lag which, at the end of the day, is the primary objective: to keep replication lag as close to zero as possible.
+[Part 3]({{< ref "monitoring-replication-lag-with-performance-schema" >}}) of this series looks at what metrics and instrumentation are available, especially in terms of monitoring replication lag which, at the end of the day, is the primary objective: to keep replication lag as close to zero as possible.

@@ -4,7 +4,7 @@ date: "2018-01-28T11:20:00-07:00"
 lastMod: "2024-06-07T11:00:00-04:00"
 title: "Database Scalability: Contention and Crosstalk"
 subtitle: "Do more with less"
-tags: ["database", "scalability", "Universal Scalability Law", "Schwartz", "Gunther"]
+tags: ["database", "scalability", "Universal Scalability Law"]
 comments: true
 aliases:
   - /post/database-scalability-contention-and-crosstalk/

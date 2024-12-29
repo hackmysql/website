@@ -23,7 +23,7 @@ This is a three-part series on replication lag with MTR and the Performance Sche
 |2|Replica preserve commit order (RPCO)|
 |3|Monitoring MTR lag with the Performance Schema|
 
-Links to each part (once they're published) are in the upper right &nearr; (or top on small screens).
+Links to each part are in the upper right &nearr; (or top on small screens).
 
 These topics are closely related&mdash;they depend on each other.
 If you're new to these topics, start here (part 1).

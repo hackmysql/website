@@ -3,7 +3,7 @@ type: "page"
 date: "2022-08-28T13:29:00-04:00"
 title: "Mining the MySQL Performance Schema for Transactions"
 subtitle: "Chapter 8"
-tags: ["mysql", "transactions", "performance_schema", "book", "efficient-mysql-performance"]
+tags: ["mysql", "transactions", "performance-schema", "book", "efficient-mysql-performance"]
 comments: true
 aliases:
   - /post/book-8/

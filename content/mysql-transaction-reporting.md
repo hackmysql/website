@@ -1,7 +1,7 @@
 ---
 date: "2022-08-28T13:28:00-04:00"
 title: "MySQL Transaction Reporting"
-tags: ["mysql", "transactions", "performance_schema"]
+tags: ["mysql", "transactions", "performance-schema"]
 menu:
   main: 
     parent: "MySQL"
