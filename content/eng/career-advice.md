@@ -1,4 +1,5 @@
 ---
+date: "2025-01-20"
 title: "Career Advice"
 summary: "'Career Advice' lists advice to help ambitious software engineers become the best in their field."
 tags: ["eng", "work"]
