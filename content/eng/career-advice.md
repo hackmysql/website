@@ -1,5 +1,4 @@
 ---
-date: "2022-12-18"
 title: "Career Advice"
 summary: "'Career Advice' lists advice to help ambitious software engineers become the best in their field."
 tags: ["eng", "work"]
@@ -37,7 +36,7 @@ This is also known as "(taking the) initiative",  being a "go-getter", and "(tak
 Those might be cliché, but they're nevertheless important because "actions speak louder than words".
 Ultimately, when all is said and done, businesses look to and reward people who _get work done_.
 
-## 5. Don't Fail...
+## 5. Don't Fail
 
 Don't fail if you break the rules.
 Judiciously breaking the rules is sometimes good and necessary to make exceptionally fast or large progress.
@@ -103,3 +102,28 @@ But there are parallels:
 * Playing your best means never settling for "it compiles and works" as good enough
 
 For every program and project you do, [Be Like Mike](https://en.wikipedia.org/wiki/Be_Like_Mike): be the Michael Jordan of engineering.
+
+## 9. Don't Complain
+
+Don't complain unless the value you've added clearly exceeds your complaints.
+
+<p class="note">
+<b>Note</b>: this does not apply to objectively bad (or "toxic") situations.
+This only applies to good or neutral situations.
+</p>
+
+During [my long career]({{< ref "lessons-from-20-years-hacking-mysql-part-1/" >}}), I've noticed a paradox: some engineers who complain are successful and effective, but other engineers who complain are not.
+I've even seen some engineers complain loudly (and somewhat rudely) and still succeed, whereas other engineers complain quietly and politely but still fail.
+Pondering this paradox with some managers, we figured out the difference: _clout_, as one manager called it.
+
+The successful complainers (the ones with clout) have a proven track record of [output]({{< ref "about#output" >}}) and adding [value]({{< ref "lessons-from-20-years-hacking-mysql-part-2/#success-anchors-to-value" >}}).
+And they continue to add value by shipping code, leveling up other engineers, and being an expert in their field.
+As such, their complaints are received positively because management knows that 1) they know what they're talking about and 2) they can and will fix it&mdash;if given the opportunity.
+
+But the failed complainers have none of that.
+As such, their complaints are received negatively because there's no evidence that they can or will do anything about them.
+But these engineers don't see it that way; they usually think they're right and that people should listen to them.
+And maybe they are right, and maybe people should listen to them.
+But without a proven track record of output and adding value, management won't take that risk, and other engineers will think "Yeah, well, what have _you_ done? It's easy to criticize. It's a lot harder to ship something that other people use, even if it's not perfect."
+
+Until you have a track record of output and adding value, learn from those who do.
