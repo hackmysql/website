@@ -5,7 +5,7 @@ title: "The Infamous ORDER BY LIMIT Query Optimizer Bug"
 subtitle: "16 Years of Fun"
 tags: ["mysql", "query-optimization", "bug"]
 comments: true
-lastmod: "2023-11-29T09:56:00-05:00"
+lastmod: "2025-04-23T13:37:00-04:00"
 aliases:
   - /post/infamous-order-by-limit-query-optimizer-bug/
 disqus_url: "https://hackmysql.com/post/infamous-order-by-limit-query-optimizer-bug/"
@@ -339,7 +339,15 @@ When this optimizer flag is off, the function that does the cost calculations de
 
 [^1]: [WL#13929: Introduce new optimizer switch to disable limit optimization](https://dev.mysql.com/worklog/task/?id=13929)
 
-Then everyone asks: "Should I disable this optimization (globally)?"
+Should you disable this optimization (globally)?
+
+**MySQL &ge; 8.0.40**
+
+Yes.
+Disabling `prefer_ordering_index` is safe and recommended in MySQL &ge; 8.0.40 because I [fixed the bug](https://bugs.mysql.com/bug.php?id=113699) mentioned below.
+This flag defaults to on, so disabling it requires explicitly configuring [`optimizer_switch`](https://dev.mysql.com/doc/refman/8.4/en/server-system-variables.html#sysvar_optimizer_switch).
+
+**MySQL &le; 8.0.39**
 
 Yes
 : But only for _new development_.
@@ -362,11 +370,12 @@ If you lose, you can quickly re-enable it, or use `FORCE INDEX` to force the sec
 <div class="note warn left-icon">
 <img class="ion" src="/img/ionicons/warning-outline.svg">
 <p>
-Disabling <code>prefer_ordering_index</code> causes another bug: MySQL does not scan the primary key for <code>SELECT ... FROM t ORDER BY pk_col LIMIT n</code>.
+Disabling <code>prefer_ordering_index</code> in MySQL &le; 8.0.39 causes another bug: MySQL does not scan the primary key for <code>SELECT ... FROM t ORDER BY pk_col LIMIT n</code>.
 Instead, it does a <em><b>full</b> table scan</em> plus sort, which is unnecessary and very likely to cause problems.
 Unlike the main subject of this blog post, I would call this a real bug.
 Thank you to Jay Janssen and Morgan Tocker for brining this to my attention.
-When I have time, I'll debug the source code for this and write another blog post.
+<br><br>
+I fixed <a href="https://bugs.mysql.com/bug.php?id=113699">this bug</a> in MySQL 8.0.40.
 </p>
 </div>
 
