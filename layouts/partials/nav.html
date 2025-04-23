@@ -36,7 +36,7 @@
 		<div id="mysqlMenu" class="submenu">
 			<div class="subtitle">Latest</div>
 				{{ $m := slice "mysql" }}
-				{{ range first 5 (where .Site.Pages ".Params.tags" "intersect" $m) }}
+				{{ range first 5 (where (where .Site.Pages ".Params.tags" "intersect" $m) ".Params.dontFeed" "ne" true) }}
 				<time>{{ .Date.Format "2006-01-02" }}</time>&nbsp;<a href="{{ .Permalink }}">{{ .Title }}</a><br>
 				{{ end }}
 			<div class="subtitle">Most Popular</div>
