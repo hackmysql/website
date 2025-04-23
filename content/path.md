@@ -2,6 +2,8 @@
 date: "2025-04-21"
 title: "An Efficient Path to Learning MySQL Performance"
 tags: ["mysql", "conference", "video", "slides"]
+params:
+  dontFeed: true
 ---
 
 <style>
