@@ -7,6 +7,8 @@ comments: true
 aliases:
   - /post/when-mysql-goes-away/
 disqus_url: "https://hackmysql.com/post/when-mysql-goes-away/"
+params:
+  path: common
 ---
 
 Handling MySQL errors in Go is not easy. There are _a lot_ of [MySQL server error codes](https://dev.mysql.com/doc/refman/5.7/en/error-messages-server.html), and the [Go MySQL driver](https://github.com/go-sql-driver/mysql) as its own errors, and Go [database/sql](https://golang.org/pkg/database/sql/) has its own errors, and errors can bubble up from other packages, like [net.OpError](https://golang.org/pkg/net/#OpError). Consequently, Go programs tend not to handle errors. Instead, they simply report errors:

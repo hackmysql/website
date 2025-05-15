@@ -9,6 +9,8 @@ aliases:
   - /post/book-10/
 disqus_url: "https://hackmysql.com/post/book-10/"
 series: "Behind the Book"
+params:
+  path: cloud
 ---
 
 No, I don't think so.

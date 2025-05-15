@@ -7,6 +7,8 @@ comments: true
 aliases:
   - /post/mysql-iops-for-reads-and-surprsies/
 disqus_url: "https://hackmysql.com/post/mysql-iops-for-reads-and-surprsies/"
+params:
+  path: data
 ---
 
 When you think about IOPS, you probably think about writes because MySQL write I/O has a long tradition of optimization, benchmarking, new algorithms, new storage engines, and so forth.

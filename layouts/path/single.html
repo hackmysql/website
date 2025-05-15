@@ -1,0 +1,42 @@
+{{ define "main" }}
+<div class="page path">
+	<div id="bird" class="path">
+	<div class="scroller">
+		<div class="pathwrap">
+			<p><a href="/path">Learn MySQL Performance</a></p>
+			{{ partial "path.html" . }}
+		</div>
+		<div style="margin-top:3em">
+			<img width="120" height="106" src="/img/emp-bird.png" alt="Efficient MySQL Performance bird">
+			<p><b><i>Efficient MySQL Performance</i></b><br>20 years of MySQL performance, written for software engineers</p>
+			<div class="book-buttons">
+			<a class="book-button" data-dst="oreilly" href="https://oreil.ly/efficient-mysql-performance">O'Reilly&nbsp;&Rang;</a><br>
+			<a class="book-button" data-dst="amazon" href="https://www.amazon.com/Efficient-MySQL-Performance-Practices-Techniques/dp/1098105095/">Amazon &nbsp;&Rang;</a><br>
+			<a class="book-button" data-dst="goodreads" href="https://www.goodreads.com/book/show/59963702-efficient-mysql-performance">Goodreads&nbsp;&Rang;</a>
+			</div>
+		</div>
+	</div>
+	</div>
+	<main>
+		<article>
+			<h1 class="post-title">{{ .Params.title }}</h1>
+			{{ if .Params.subtitle }}<h2 class="post-subtitle">{{.Params.subtitle}}</h2>{{ end }}
+			{{ $wrappedTable := printf "<div class=\"to\"> ${1} </div>" }}
+			{{ .Content | replaceRE "(<table>(?:.|\n)+?</table>)" $wrappedTable | safeHTML }}
+			<div class="print-copyright">
+				Source: {{ .Permalink }}<br>
+				Copyright {{ .Site.Lastmod.Format "2006" }} {{ .Site.Params.author.name }}
+			</div>
+		</article>
+	</main>
+	<nav id="toc" class="path">
+		<div class="scroller">
+			{{ if ne .TableOfContents "<nav id=\"TableOfContents\"></nav>" }}
+			<em><a href="#">{{.Title}}</a></em>
+			<hr>
+			{{ .TableOfContents }}
+			{{ end }}
+		</div>
+	</nav>
+</div>
+{{ end }}

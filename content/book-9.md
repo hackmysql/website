@@ -9,6 +9,8 @@ aliases:
   - /post/book-9/
 disqus_url: "https://hackmysql.com/post/book-9/"
 series: "Behind the Book"
+params:
+  path: common
 ---
 
 Chapter 9 of [_Efficient MySQL Performance_](https://oreil.ly/efficient-mysql-performance) changed in development. Originally, it was a chapter titled "Not MySQL", as in "how not to use MySQL." But we (O'Reilly and I) pulled the chapter, and the current chapter 9 in print is "Other Challenges": an important laundry list of other challenges engineers using MySQL must be aware of and address. This blog post is a sketch of the unwritten chapter 9: how not to use MySQL.

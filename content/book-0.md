@@ -1,5 +1,4 @@
 ---
-type: "page"
 date: "2021-12-27T09:30:00-05:00"
 title: "Efficient MySQL Performance"
 subtitle: "Preface"

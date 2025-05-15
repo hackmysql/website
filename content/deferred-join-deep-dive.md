@@ -7,6 +7,8 @@ comments: true
 aliases:
   - /post/deferred-join-deep-dive/
 disqus_url: "https://hackmysql.com/post/deferred-join-deep-dive/"
+params:
+  path: data
 ---
 
 Deferred join is powerful.

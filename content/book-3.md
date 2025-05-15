@@ -9,6 +9,8 @@ aliases:
   - /post/book-3/
 disqus_url: "https://hackmysql.com/post/book-3/"
 series: "Behind the Book"
+params:
+  path: data
 ---
 
 Is MySQL performance about "more" or "less"? From the title, you can tell that I'm going to argue that it's about "less". Here's the punchline: zero is maximum performance. Let's see where this philosophical blog post leads us.

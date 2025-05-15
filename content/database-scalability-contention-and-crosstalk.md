@@ -9,12 +9,13 @@ comments: true
 aliases:
   - /post/database-scalability-contention-and-crosstalk/
 disqus_url: "https://hackmysql.com/post/database-scalability-contention-and-crosstalk/"
+params:
+  path: data
 ---
 
 New engineers might not know and experienced engineers might not believe that database systems do not and cannot scale gracefully to 100% system capacity but, rather and counterintutively, exhibit _retrograde_ performance at some point less than 100% system capacity. The reasonable presumption is:
 
 ![Database Scalability Myth](/img/db-scalability-myth.svg)
-
 
 We presume that a database can scale to almost 100% of system capacity, and max performance is a small fraction at the very top (right, orange slice) because, after all, the system itself needs some resources to run itself. But the reality of database scalability is far less optimistic:
 

@@ -15,6 +15,7 @@ copyright = "2024 Daniel Nichter"
 [taxonomies]
 tag = "tags"
 series = "series"
+path = "path"
 
 [markup.goldmark.renderer]
 unsafe = true

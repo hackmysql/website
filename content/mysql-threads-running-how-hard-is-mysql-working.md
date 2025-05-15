@@ -8,6 +8,8 @@ comments: true
 aliases:
   - /post/mysql-threads-running-how-hard-is-mysql-working/
 disqus_url: "https://hackmysql.com/post/mysql-threads-running-how-hard-is-mysql-working/"
+params:
+  path: metrics
 ---
 
 Queries per second (QPS) measures database throughput, but it does not reflect how hard MySQL is working. The latter is measured by _[Threads_running](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Threads_running)_, expressed as a gauge (whereas QPS is a rate). Before discussing _Threads_running_, let's consider an analogy:

@@ -2,10 +2,10 @@
 date: "2020-01-12"
 title: "Queries Effect Performance"
 tags: ["mysql", "performance", "queries"]
-comments: true
 aliases:
   - /post/queries-effect-performance/
-disqus_url: "https://hackmysql.com/post/queries-effect-performance/"
+params:
+  path: qrt
 ---
 
 Queries _effect_ database performance. That's not a typo: "effect" not "affect". The difference is not a word game but an important way to think about database performance.

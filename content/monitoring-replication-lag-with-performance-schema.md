@@ -4,6 +4,8 @@ title: "Monitoring Multi-threaded Replication Lag With Performance Schema"
 tags: ["mysql", "replication", "lag", "monitoring", "performance-schema"]
 comments: true
 series: "Replication Lag"
+params:
+  path: repl
 ---
 
 Used to be that replication lag was as simple as `Seconds_Behind_Master` (renamed to `Seconds_Behind_Source`). 

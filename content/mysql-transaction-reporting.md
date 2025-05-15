@@ -8,6 +8,8 @@ menu:
 summary: "How to inspect and report MySQL transactions using the Performance Schema"
 aliases:
   - /trx
+params:
+  path: trx
 ---
 
 In chapter 8 of [_Efficient MySQL Performance_](https://oreil.ly/efficient-mysql-performance), I discuss reporting MySQL transactions (among many other related topics).

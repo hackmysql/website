@@ -1,0 +1,7 @@
+<ul>
+{{ $m := slice "mysql" }}
+{{ $p := .Get "path" }}
+{{ range (where (where .Site.Pages ".Params.tags" "intersect" $m) ".Params.path" "eq" $p) }}
+<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+{{ end }}
+</ul>

@@ -8,6 +8,8 @@ comments: true
 aliases:
   - /post/crash-safe-mysql-replication-a-visual-guide/
 disqus_url: "https://hackmysql.com/post/crash-safe-mysql-replication-a-visual-guide/"
+params:
+  path: repl
 ---
 
 MySQL crash-safe replication is an old feature (~4 years as of MySQL 5.6), but it's not consistently understood or applied. The MySQL manual on the topic, [16.3.2 Handling an Unexpected Halt of a Replication Slave](https://dev.mysql.com/doc/refman/5.7/en/replication-solutions-unexpected-slave-halt.html), is correct and authoritative, but unless you grok MySQL replication that page doesn't make it obvious _why_ crash-safe replication works. Other blog posts explain why, but sometimes add other considerations, making it unclear which settings are necessary and sufficient. The aim of this blog post is total enlightenment, a full crash-safe-spiritual awakening. Light the censers and let us begin at the beginning...

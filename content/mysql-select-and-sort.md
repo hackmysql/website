@@ -6,6 +6,8 @@ summary: "A deep dive into the MySQL select and sort status variables"
 tags: ["mysql", "sysvar"]
 aliases:
   - /selectandsort
+params:
+  path: metrics
 ---
 
 This page is a reboot of the original written 15 years ago in 2005.
