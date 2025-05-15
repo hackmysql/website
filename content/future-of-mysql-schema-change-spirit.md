@@ -7,6 +7,8 @@ comments: true
 aliases:
   - /post/future-of-mysql-schema-change-spirit/
 disqus_url: "https://hackmysql.com/post/future-of-mysql-schema-change-spirit/"
+params:
+  path: common
 ---
 
 Using pt-online-schema or gh-ost?

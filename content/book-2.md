@@ -9,6 +9,8 @@ aliases:
   - /post/book-2/
 disqus_url: "https://hackmysql.com/post/book-2/"
 series: "Behind the Book"
+params:
+  path: index
 ---
 
 As of MySQL 8.0.18, [`EXPLAIN ANALYZE`](https://dev.mysql.com/doc/refman/8.0/en/explain.html#explain-analyze) is an indispensable tool for understanding query execution because it breaks down the query execution stage of response time by measuring each step of the query execution plan.

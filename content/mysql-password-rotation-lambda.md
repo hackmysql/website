@@ -2,9 +2,6 @@
 date: "2020-12-28T09:56:00-05:00"
 title: "MySQL Password Rotation with AWS Secrets Manager and Lambda"
 tags: ["mysql", "aws", "aws-secrets-manager", "aws-lambda", "aws-s3", "terraform"]
-menu:
-  main: 
-    parent: "MySQL"
 summary: "How to set up MySQL password rotation with AWS Secrets Manager, AWS Lambda, and Terraform"
 ---
 

@@ -1,0 +1,11 @@
+<div class="path">
+	{{ $n := 1 }}
+	{{ range where .Site.RegularPages.ByWeight "Section" "learn"  }}
+	{{ $x := eq .LinkTitle $.Title }}
+	<div class="pi">
+		<div class="ps {{ if $x }}x{{ end }} {{ if eq $n 1 }}t{{ else if eq $n 9 }}b{{ end }}"></div>
+		<div class="pl"><a href="{{ .RelPermalink }}">{{ $n }}. {{ .Title }}</a></div>
+	</div>
+	{{ $n = add $n 1 }}
+	{{ end }}
+</div>

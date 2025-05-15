@@ -6,6 +6,8 @@ comments: true
 aliases:
   - /post/when-commit-is-the-slowest-query/
 disqus_url: "https://hackmysql.com/post/when-commit-is-the-slowest-query/"
+params:
+  path: qrt
 ---
 
 When `COMMIT` is the slowest query, it means your storage is slow.

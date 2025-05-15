@@ -9,6 +9,8 @@ aliases:
   - /post/book-8/
 disqus_url: "https://hackmysql.com/post/book-8/"
 series: "Behind the Book"
+params:
+  path: trx
 ---
 
 The MySQL [Performance Schema](https://dev.mysql.com/doc/refman/8.0/en/performance-schema.html) is a gold mine of valuable data.

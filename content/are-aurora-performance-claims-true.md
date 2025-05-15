@@ -7,6 +7,8 @@ type: "page"
 lastMod: "2024-06-04T13:36:00-04:00"
 aliases:
   - /post/are-aurora-performance-claims-true/
+params:
+  path: cloud
 ---
 
 Amazon claims that Aurora has "Up to 5X the throughput of MySQL".

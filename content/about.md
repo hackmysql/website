@@ -1,6 +1,5 @@
 ---
 title: "About"
-menu: main
 summary: "Hack MySQL is the personal website of Daniel Nichter, author of the book Efficient MySQL Performance published by O'Reilly. His webiste explores MySQL, Go, and software design."
 ---
 

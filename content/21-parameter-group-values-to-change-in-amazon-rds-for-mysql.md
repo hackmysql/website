@@ -6,6 +6,8 @@ comments: true
 aliases:
   - /post/21-parameter-group-values-to-change-in-amazon-rds-for-mysql/
 disqus_url: "https://hackmysql.com/post/21-parameter-group-values-to-change-in-amazon-rds-for-mysql/"
+params:
+  path: cloud
 ---
 
 [Amazon RDS for MySQL](https://aws.amazon.com/rds/mysql/) uses many default values for system variables, but it also sets a few "sys vars" with different values. As with any database, neither product (MySQL) nor provider (AWS) defaults can best suite all use cases. It's our responsibility to carefully review and set every important system variable. This is tedious and difficult, but I've done it for you.

@@ -5,6 +5,8 @@ title: "Replica Preserve Commit Order and Measuring Lag"
 tags: ["mysql", "replication", "lag", "preserve-commit-order"]
 comments: true
 series: "Replication Lag"
+params:
+  path: repl
 ---
 
 With multi-threaded replication (MTR), a replica can commit transactions in the same order as the source, or not.

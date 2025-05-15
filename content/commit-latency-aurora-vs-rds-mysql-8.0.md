@@ -8,6 +8,8 @@ lastmod: "2023-02-18T13:35:00-05:00"
 aliases:
   - /post/commit-latency-aurora-vs-rds-mysql-8.0/
 disqus_url: "https://hackmysql.com/post/commit-latency-aurora-vs-rds-mysql-8.0/"
+params:
+  path: cloud
 ---
 
 Let's examine `COMMIT` latency on Aurora v2 (MySQL 5.7) vs. Aurora v3 (MySQL 8.0) vs. RDS MySQL 8.0 2-AZ vs. RDS MySQL 8.0 3-AZ "cluster".

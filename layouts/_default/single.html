@@ -1,11 +1,29 @@
 {{ define "main" }}
 <div class="page">
 	<div id="bird">
+		{{ if .Params.path }}
+		{{ $n := 0 }}
+		{{ $r := "" }}
+		{{ $p := .Params.path }}
+		{{ if eq $p "qrt" }}		 {{ $n = 1 }}{{ $r = .RelRef (dict "path" "query-response-time") }}
+		{{ else if eq $p "index" }}	 {{ $n = 2 }}{{ $r = .RelRef (dict "path" "indexes-and-indexing") }}
+		{{ else if eq $p "data" }}	 {{ $n = 3 }}{{ $r = .RelRef (dict "path" "data-and-access-patterns") }}
+		{{ else if eq $p "shard" }}	 {{ $n = 4 }}{{ $r = .RelRef (dict "path" "sharding") }}
+		{{ else if eq $p "metrics" }}{{ $n = 5 }}{{ $r = .RelRef (dict "path" "server-metrics-and-innodb") }}
+		{{ else if eq $p "repl" }}	 {{ $n = 6 }}{{ $r = .RelRef (dict "path" "replication") }}
+		{{ else if eq $p "trx" }}	 {{ $n = 7 }}{{ $r = .RelRef (dict "path" "transactions-and-data-locks") }}
+		{{ else if eq $p "common" }} {{ $n = 8 }}{{ $r = .RelRef (dict "path" "common-challenges") }}
+		{{ else if eq $p "cloud" }}	 {{ $n = 9 }}{{ $r = .RelRef (dict "path" "cloud-performance") }}
+		{{ end }}
+		<div class="pr"><span><i>Learn MySQL Performance</i></span>&nbsp;&nbsp;<a href="{{ $r }}">{{ $n }}</a></div>
+		{{ end }}
 		<img width="120" height="106" src="/img/emp-bird.png" alt="Efficient MySQL Performance bird">
 		<p><b><i>Efficient MySQL Performance</i></b><br>20 years of MySQL performance, written for software engineers</p>
+		<div class="book-buttons">
 		<a class="book-button" data-dst="oreilly" href="https://oreil.ly/efficient-mysql-performance">O'Reilly&nbsp;&Rang;</a><br>
 		<a class="book-button" data-dst="amazon" href="https://www.amazon.com/Efficient-MySQL-Performance-Practices-Techniques/dp/1098105095/">Amazon &nbsp;&Rang;</a><br>
 		<a class="book-button" data-dst="goodreads" href="https://www.goodreads.com/book/show/59963702-efficient-mysql-performance">Goodreads&nbsp;&Rang;</a>
+		</div>
 	</div>
 	<main>
 		<article>
@@ -27,7 +45,7 @@
 			{{ if .Params.series }}
 				{{ .Params.series }} Series
 				<hr>
-				<div style="display:flex; flex-wrap:wrap; gap:1em; margin-bottom:2rem;">
+				<div class="ser">
 				{{ $thisPage := .Title }}
 				{{ $n := 1 }}
 				{{ $pages := index .Site.Taxonomies.series (lower .Params.series) }}

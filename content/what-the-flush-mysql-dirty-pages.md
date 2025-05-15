@@ -7,6 +7,8 @@ comments: true
 aliases:
   - /post/what-the-flush-mysql-dirty-pages/
 disqus_url: "https://hackmysql.com/post/what-the-flush-mysql-dirty-pages/"
+params:
+  path: metrics
 ---
 
 Yves Trudeau and Francisco Bordenave, MySQL experts at Percona, recently published a three-part post:

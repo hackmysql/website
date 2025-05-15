@@ -6,6 +6,8 @@ comments: true
 aliases:
   - /post/mysql-lru-flushing-io-capacity/
 disqus_url: "https://hackmysql.com/post/mysql-lru-flushing-io-capacity/"
+params:
+  path: metrics
 ---
 
 InnoDB background LRU list flushing is _not_ limited by [`innodb_io_capcity`](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity) or [`innodb_io_capacity_max`](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity_max).

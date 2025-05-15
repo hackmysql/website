@@ -11,105 +11,22 @@
 				<a class="book-button"  data-dst="goodreads" href="https://www.goodreads.com/book/show/59963702-efficient-mysql-performance">Goodreads&nbsp;&Rang;</a>
 			</div>
 			<div class="my-book-desc">
-				<p><b>What is MySQL performance and how do you get it?</b> <i>Efficient MySQL Performance</i> will teach you. Read it to gain 20 years of MySQL performance know-how&mdash;written for software engineers, not DBAs.</p>
-
 				<p>"Daniel does a great job of showing how to drive to the <mark>fastest resolution</mark> without getting lost in guesswork. He also covers InnoDB row locking in a detailed yet digestible form."<br>—Vadim Tkachenko, CTO, Percona</p>
 
 				<p>"This book is different from other MySQL books—it focuses on what matters most: query response time. A <mark>must-have</mark> for MySQL users!"<br>—Frédéric Descamps, MySQL Community Manager, Oracle Belgium</p>
 
 				<p>"Hands down [the] <mark>best technical book I've ever read</mark>, and I've been working in this field for close to 30 years."<br>—Adam (<a href="https://www.amazon.com/Efficient-MySQL-Performance-Practices-Techniques/dp/1098105095/#customerReviews">verified Amazon review</a>)
-			</div>
-		</div>
-		<div class="books more">
-			<span class="more">More books about databases, MySQL, and SQL</span>
-			<hr>
-			<div class="book-covers">
-				<a href="https://www.oreilly.com/library/view/learning-mysql-2nd/9781492085911/"><img width="114" height="150" src="/img/learning-mysql-2e-book-cover.jpeg" alt="Learning MySQL (2nd Edition)"></a>
-				<a href="https://www.oreilly.com/library/view/high-performance-mysql/9781492080503/"><img width="114" height="150" src="/img/high-performance-mysql-4e-book-cover.jpeg " alt="High Performance MySQL (4th Edition)"></a>
-				<a href="https://www.oreilly.com/library/view/database-internals/9781492040330/"><img width="114" height="150" src="/img/database-internals-book-cover.jpeg" alt="Database Internals"></a>
-				<a href="https://www.oreilly.com/library/view/mysql-troubleshooting/9781449317836/"><img width="114" height="150" src="/img/mysql-troubleshooting-book-cover.jpeg" alt="MySQL Troubleshooting"></a>
-				<a href="https://learning.oreilly.com/library/view/mysql-cookbook-4th/9781492093152/"><img width="114" height="150" src="/img/mysql-cookbook-4ed-book-cover.jpeg" alt="MySQL Cookbook (4th Edition)"></a>
-				<a href="https://pragprog.com/titles/bksap1/sql-antipatterns-volume-1/"><img width="125" height="150" src="/img/sql-antipatterns-vol-1-book-cover.jpeg " alt="SQL Antipatterns (Vol. 1)"></a>
-				<a href="https://link.springer.com/book/10.1007/978-1-4842-6652-6"><img width="105" height="150" src="/img/mysql-concurrency-book-cover.jpeg" alt="MySQL Concurrency: Locking and Transactions for MySQL Developers and DBAs"></a>
+				<p><mark>Extremely well written and accessible</mark>&nbsp;—<a href="https://www.reddit.com/r/mysql/comments/1hk729x/mysql_book_high_performance_mysql_vs_efficient/">reddit comment</a></p>
 			</div>
 		</div>
 	</div>
-	<div id="blogs">
-		{{ range first 1 (where (where .Site.RegularPages "Section" "") ".Params.dontFeed" "ne" true) }}
-		<div class="post-preview">
-			<a href="{{ .Permalink }}">
-				<h1 class="post-title">{{ .Title }}</h1>
-				{{ if .Params.subtitle }}<h2 class="post-subtitle">{{ .Params.subtitle }}</h2>{{ end }}
-			</a>
-			{{ partial "post_meta.html" . }}
-			<div class="post-entry">
-				{{ if .Truncated }}
-					{{ .Summary }}
-					<div class="read-more"><a href="{{ .Permalink }}" rel="nofollow">Read more&hellip;</a></div>
-				{{ else }}
-					{{ .Content }}
-				{{ end }}
-			</div>
-		</div>
-		{{ end }}
-		<div class="more blogs">
-			<span class="more">More blogs from MySQL experts</span>
-			<hr>
-			<div><a href="https://database.news/">database.news</a></div>
-			<div><a href="https://lefred.be/">Frédéric "lefred" Descamps</a></div>
-			<div><a href="https://jfg-mysql.blogspot.com/">Jean-François "J-F" Gagné</a></div>
-			<div><a href="https://smalldatum.blogspot.com/">Mark Callaghan</a></div>
-			<div><a href="https://planet.mysql.com/">Planet MySQL Oracle (aggregator)</a></div>
-			<div><a href="https://mariadb.org/planet/">Planet MariaDB Server (aggregator)</a></div>
-			<div><a href="https://planet.oursqlcommunity.org/">Planet MySQL Community (aggregator)</a></div>
-			<div><a href="https://www.percona.com/blog/">Percona</a></div>
-			<div><a href="https://percona.community/blog/">Percona Community</a></div>
-			<div><a href="https://planetscale.com/blog/category/engineering">PlanetScale</a></div>
-		</div>
-	</div>
-	<div class="tools">
-		<div class="tool" onclick="location.href='https://github.com/cashapp/blip';" >
-			<img class="ion" src="/img/ionicons/pulse-outline.svg" alt="Pulse icon">
-			<div>
-				<a href="https://github.com/cashapp/blip">Blip</a><br>
-				The most advanced MySQL metrics collector ever written
-			</div>
-		</div>
-		<div class="tool" onclick="location.href='https://github.com/cashapp/spirit';">
-			<img class="ion" src="/img/ionicons/albums-outline.svg" alt="Albums icon">
-			<div>
-				<a href="https://github.com/cashapp/spirit">Spirit</a><br>
-				The fastest online schema change tool for MySQL 8.x
-			</div>
-		</div>
-		<div class="tool" onclick="location.href='https://github.com/square/finch';">
-			<img class="ion" src="/img/ionicons/speedometer-outline.svg" alt="Speedometer icon">
-			<div>
-				<a href="https://github.com/square/finch">Finch</a><br>
-				The modern declarative MySQL benchmarking tool
-			</div>
-		</div>
-		<div class="tool" onclick="location.href='https://www.skeema.io/';">
-			<img class="ion" src="/img/ionicons/repeat-outline.svg" alt="Repeat icon">
-			<div>
-				<a href="https://www.skeema.io/">Skeema</a><br>
-				The best way to manage MySQL table definitions
-			</div>
-		</div>
-		<div class="tool" onclick="location.href='https://www.percona.com/software/database-tools/percona-toolkit';">
-			<img class="ion" src="/img/ionicons/build-outline.svg" alt="Wrench icon">
-			<div>
-				<a href="https://www.percona.com/software/database-tools/percona-toolkit">Percona Toolkit</a><br>
-				The famous MySQL tools that changed the world
-			</div>
-		</div>
-		<div class="tool" onclick="location.href='https://www.percona.com/software/database-tools/percona-monitoring-and-management';">
-			<img class="ion" src="/img/ionicons/server-outline.svg" alt="Database icon">
-			<div>
-				<a href="https://www.percona.com/software/database-tools/percona-monitoring-and-management">Percona Monitoring &amp; Management</a><br>
-				The open source database observability, monitoring, and management stack
-			</div>
-		</div>
+	<div class="learn">
+		<h1>Learn MySQL Performance</h1>
+		<p>👈 Read the book or follow the path 👇 to learn how to make MySQL performance 🙌 for your application. Do both for 🤯 MySQL performance!</p>
+		<p><i>Efficient MySQL Performance</i> distills 20 years of MySQL expertise into 344 pages. Written for software developers, not DBAs, it's easy to digest even if you're new to MySQL.</p>
+		<p>The path below is an efficient way through the jungle of MySQL performance topics. Avoid pitfalls! Learn these topics in this order.</p>
+		{{ partial "path.html" . }}
+		<p>What's the difference? The book is a map <i>and</i> a local guide to teach you along the way. The path is just a map. <a href="/path">Learn more</a>.</p>
 	</div>
 </main>
 {{ end }}

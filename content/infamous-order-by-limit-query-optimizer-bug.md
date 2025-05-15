@@ -9,6 +9,8 @@ lastmod: "2025-04-23T13:37:00-04:00"
 aliases:
   - /post/infamous-order-by-limit-query-optimizer-bug/
 disqus_url: "https://hackmysql.com/post/infamous-order-by-limit-query-optimizer-bug/"
+params:
+  path: index
 ---
 
 Which is faster: `LIMIT 1` or `LIMIT 20`?

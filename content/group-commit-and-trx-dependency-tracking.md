@@ -6,6 +6,8 @@ subtitle: "Towards Multi-threaded Replication"
 tags: ["mysql", "replication", "group-commit", "logical-clock", "writeset"]
 comments: true
 series: "Replication Lag"
+params:
+  path: repl
 ---
 
 MySQL 8.0 and newer change and improve how we measure and monitor replication lag.
