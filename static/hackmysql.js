@@ -24,10 +24,4 @@ function zen() {
 	document.getElementById("focus").classList.toggle('zen');
 	document.querySelector('article').classList.toggle('noborder');
 }
-function showAnswer(id) {
-	let b = event.srcElement; // the button
-	b.style.display = 'none';
-	let a = b.nextElementSibling; // the answer <p> next to button
-	a.style.display = 'inline';
-}
 window.onclick = function(e) { if (!e.target.matches('.menuButton')) closeMenus() }
