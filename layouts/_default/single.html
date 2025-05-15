@@ -5,15 +5,15 @@
 		{{ $n := 0 }}
 		{{ $r := "" }}
 		{{ $p := .Params.path }}
-		{{ if eq $p "qrt" }}		 {{ $n = 1 }}{{ $r = .RelRef (dict "path" "query-response-time") }}
-		{{ else if eq $p "index" }}	 {{ $n = 2 }}{{ $r = .RelRef (dict "path" "indexes-and-indexing") }}
-		{{ else if eq $p "data" }}	 {{ $n = 3 }}{{ $r = .RelRef (dict "path" "data-and-access-patterns") }}
-		{{ else if eq $p "shard" }}	 {{ $n = 4 }}{{ $r = .RelRef (dict "path" "sharding") }}
-		{{ else if eq $p "metrics" }}{{ $n = 5 }}{{ $r = .RelRef (dict "path" "server-metrics-and-innodb") }}
-		{{ else if eq $p "repl" }}	 {{ $n = 6 }}{{ $r = .RelRef (dict "path" "replication") }}
-		{{ else if eq $p "trx" }}	 {{ $n = 7 }}{{ $r = .RelRef (dict "path" "transactions-and-data-locks") }}
-		{{ else if eq $p "common" }} {{ $n = 8 }}{{ $r = .RelRef (dict "path" "common-challenges") }}
-		{{ else if eq $p "cloud" }}	 {{ $n = 9 }}{{ $r = .RelRef (dict "path" "cloud-performance") }}
+		{{ if eq $p "qrt" }}		 {{ $n = 1 }}{{ $r = .RelRef (dict "path" "learn/query-response-time") }}
+		{{ else if eq $p "index" }}	 {{ $n = 2 }}{{ $r = .RelRef (dict "path" "learn/indexes-and-indexing") }}
+		{{ else if eq $p "data" }}	 {{ $n = 3 }}{{ $r = .RelRef (dict "path" "learn/data-and-access-patterns") }}
+		{{ else if eq $p "shard" }}	 {{ $n = 4 }}{{ $r = .RelRef (dict "path" "learn/sharding") }}
+		{{ else if eq $p "metrics" }}{{ $n = 5 }}{{ $r = .RelRef (dict "path" "learn/server-metrics-and-innodb") }}
+		{{ else if eq $p "repl" }}	 {{ $n = 6 }}{{ $r = .RelRef (dict "path" "learn/replication") }}
+		{{ else if eq $p "trx" }}	 {{ $n = 7 }}{{ $r = .RelRef (dict "path" "learn/transactions-and-data-locks") }}
+		{{ else if eq $p "common" }} {{ $n = 8 }}{{ $r = .RelRef (dict "path" "learn/common-challenges") }}
+		{{ else if eq $p "cloud" }}	 {{ $n = 9 }}{{ $r = .RelRef (dict "path" "learn/cloud-performance") }}
 		{{ end }}
 		<div class="pr"><span><i>Learn MySQL Performance</i></span>&nbsp;&nbsp;<a href="{{ $r }}">{{ $n }}</a></div>
 		{{ end }}
