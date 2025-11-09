@@ -566,6 +566,8 @@ footer a { color: var(--border); text-decoration: none; }
 
 .notfound {margin: 1rem auto; width: 50%;}
 
+.post-content .post-message p { color: light-dark(var(--light-txt), var(--dark-txt)); }
+
 /* flags */
 .show {display:block;}
 .drop {text-decoration:underline; text-decoration-color:hotpink; text-underline-position:under;}
