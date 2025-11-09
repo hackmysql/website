@@ -566,7 +566,7 @@ footer a { color: var(--border); text-decoration: none; }
 
 .notfound {margin: 1rem auto; width: 50%;}
 
-.post-content .post-message p { color: light-dark(var(--light-txt), var(--dark-txt)); }
+#disqus_thread p { color: light-dark(var(--light-txt), var(--dark-txt)); }
 
 /* flags */
 .show {display:block;}
