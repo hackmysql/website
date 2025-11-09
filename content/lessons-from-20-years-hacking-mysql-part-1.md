@@ -119,13 +119,13 @@ But overall I've been successful thanks to a slim majority of random good luck:
 This is true for my 20 years with MySQL, my whole career, and my whole life.
 All the biggest successes of my life started with random good luck: right place, right time, right people&mdash;that kind of thing.
 
-Good luck opens doors, but you have to walk through and hike the hill or climb the mountain on the other side.
+Good luck opens doors, but you have to walk through and climb the mountain on the other side.
 That's where the 47% hard work and patience comes in: all the success stories I know took at least 5 years, but 10 years is more typical.
 It takes time to build value, and even longer to change the way people work.
 
 And 2% skill?
 At this point in my career, I hope it's not a conceit to say that I've got more skill than that.
-But along the way&mdash;hiking the hill or climbing the mountain&mdash;success is built by operating a little beyond the current limits.
+But along the way&mdash;climbing the mountain&mdash;success is built by operating a little beyond the current limits.
 Or, as David Bowie said:
 
 > If you feel safe in the area you’re working in, you’re not working in the right area. Always go a little further into the water than you feel you’re capable of being in. Go a little bit out of your depth. And when you don’t feel that your feet are quite touching the bottom, you’re just about in the right place to do something exciting.
@@ -154,7 +154,7 @@ But if you don't tilt the field in your favor, then you have even odds of succes
 If biasing towards success sounds like a "pick yourself up by the bootstrap" cliché, then think of it like a video game: you know success is possible (it's programmed into the game), but you have to complete quests, get items, defeat bosses, and gain skills and experience.
 After awhile, success comes easily because you're a high-level player.
 
-Real life is surprising like a video game.
+Real life is surprisingly like a video game.
 Success is possible; it's even programmed into the "game" because most people and most of the world wants you to succeed.
 But there are definitely enemies and bosses&mdash;competition and people who don't want you to succeed&mdash;which is why success takes work.
 
@@ -201,7 +201,9 @@ It will protect you from every attack at work.
 It will attract all the best people and opportunities to you.
 Hold on to it.
 
-<div style="text-align:center"><img src="/img/ionicons/shield-outline.svg" style="height:2rem; display:inline;" alt="shiedl"></div>
+<div id="magical-shield" style="text-align:center">
+<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M463.1 112.37C373.68 96.33 336.71 84.45 256 48c-80.71 36.45-117.68 48.33-207.1 64.37C32.7 369.13 240.58 457.79 256 464c15.42-6.21 223.3-94.87 207.1-351.63z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+</div>
 
 Success and failure are not random.
 Randomness is only part of success.
@@ -353,10 +355,3 @@ Learning how to raise issues and call out problems _without_ being be labeled a 
 As an engineer who builds and fixes things, the temptation to fix the business is powerful, but until you have that skill, tread very lightly and hold onto your [magical shield](#shield).
 
 [^7]: Rule #1 for raising issues or calling out problems without being be labeled a naysayer or obstructionist: _offer realistic solutions or ways to improve_.
-
----
-
-<div style="text-align:center">
-
-[Part 2: Philosophy]({{< ref "lessons-from-20-years-hacking-mysql-part-2" >}})
-</div>

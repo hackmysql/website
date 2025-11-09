@@ -370,15 +370,15 @@ If you win, nothing will happen; performance will stay the same.
 If you lose, you can quickly re-enable it, or use `FORCE INDEX` to force the secondary index (use `EXPLAIN` to see what it is before MySQL changes the plan).
 
 <div class="note warn left-icon">
-<img class="ion" src="/img/ionicons/warning-outline.svg">
-<p>
+<div>{{< warning-icon >}}</div>
+<div>
 Disabling <code>prefer_ordering_index</code> in MySQL &le; 8.0.39 causes another bug: MySQL does not scan the primary key for <code>SELECT ... FROM t ORDER BY pk_col LIMIT n</code>.
 Instead, it does a <em><b>full</b> table scan</em> plus sort, which is unnecessary and very likely to cause problems.
 Unlike the main subject of this blog post, I would call this a real bug.
 Thank you to Jay Janssen and Morgan Tocker for brining this to my attention.
 <br><br>
 I fixed <a href="https://bugs.mysql.com/bug.php?id=113699">this bug</a> in MySQL 8.0.40.
-</p>
+</div>
 </div>
 
 Bottom line: you may never be bitten by the infamous ORDER BY LIMIT query optimizer bug, but if you are, you can disable the optimizer flag, or workaround by increasing the `LIMIT` value to change the cost calculations, or use `FORCE INDEX` to force the original secondary index.

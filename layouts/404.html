@@ -1,12 +1,15 @@
 {{ define "main" }}
 <main class="notfound">
-	<br><br><br>
 	<h1>404 Page Not Found</h1>
 	<p>This error has been logged and will be fixed with a redirect if the page or alternative content exists.</p>
 	<p>Here's a secret gift for your troubles:</p>
-	<p>
-		<img class="ion" src="/img/ionicons/gift-outline.svg" style="vertical-align:middle">
-		<a href="https://www.oreilly.com/library/view/efficient-mysql-performance/9781098105082/ch01.html">Chapter 1</a> of my book <i>Efficient MySQL Performance</i>.
-	</p>
+	<div style="display:flex; gap:1rem; align-items:center;">
+		<div>
+			<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M256 104v56h56a56 56 0 10-56-56zM256 104v56h-56a56 56 0 1156-56z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32"/><rect x="64" y="160" width="384" height="112" rx="32" ry="32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path d="M416 272v144a48 48 0 01-48 48H144a48 48 0 01-48-48V272M256 160v304" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+		</div>
+		<div>
+			<a href="https://www.oreilly.com/library/view/efficient-mysql-performance/9781098105082/ch01.html">Chapter 1</a> of my book <i>Efficient MySQL Performance</i>.
+		</div>
+	</div>
 </main>
 {{ end }}

@@ -33,7 +33,7 @@ h1 {margin:0.5rem 0;}
 </style>
 
 <div class="left-icon" style="border: 3px solid hotpink; border-radius: 15px; padding:1rem;">
-<img class="ion" src="/img/ionicons/alert-circle-outline.svg">
+<div style="margin-right: 1rem">{{< alert-icon >}}</div>
 Redirected from another link?
 That link points to something archived.
 Rather than leaving you stranded on a 404 page, this archive provides alternatives.</p>

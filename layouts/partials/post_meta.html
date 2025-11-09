@@ -3,7 +3,7 @@
 		{{ if .Date }}
 			{{ .Date.Format "Jan 2, 2006" }}
 			{{ if ne .Date .Page.Params.Lastmod  }}
-			<img class="ion" src="/img/ionicons/refresh-outline.svg" style="height:0.9em; color:inherit; margin:0">
+			<svg xmlns="http://www.w3.org/2000/svg" style="height:1rem" viewBox="0 0 512 512"><path d="M320 146s24.36-12-64-12a160 160 0 10160 160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M256 58l80 80-80 80"/></svg>
 			{{ dateFormat "Jan 2, 2006" $.Page.Params.Lastmod }}
 			{{ end }}
 		{{ end }}
@@ -16,4 +16,3 @@
 	</div>
 	{{ end }}
 </div>
-

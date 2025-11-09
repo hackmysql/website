@@ -178,13 +178,13 @@ Instead, sort (1) init time includes both index range scan (0) read time and tim
 Since index range scan (0) read time is only time spent fetching rows, we can subtract it from sort (1) init time to roughly calculate time spent sorting rows: 2043.416 &minus; 1996.350 &equals; 47 ms.
 
 <div class="note warn left-icon">
-<img class="ion" src="/img/ionicons/warning-outline.svg">
-<p>
+<div>{{< warning-icon >}}</div>
+<div>
 Alas, the aforementioned means that my original explanation on page 70 of <a href="https://oreil.ly/efficient-mysql-performance"><i>Efficient MySQL Performance</i></a> is not accurate.
 I wrote that "the filesort (line 1) started after [2043.416] milliseconds and ended after [2051.792]  milliseconds, which means the filesort took 8 milliseconds."
 The conclusion is still correct: "The answer is no: filesort does not make this query slow. The problem is data access: 68,439 rows is not a small result set."
 But how I arrived at the conclusion was incorrect.
-</p>
+</div>
 </div>
 
 The moral of the story is: sometimes you need to understand how iterators work under the hood (in the MySQL source code) in order to correctly interpret the reported timing values.
