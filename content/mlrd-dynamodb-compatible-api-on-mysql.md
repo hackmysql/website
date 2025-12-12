@@ -6,7 +6,7 @@ comments: true
 ---
 
 Introducing [`mlrd`](https://mlrd.tech/) ("mallard") to the world: a DynamoDB-compatible API on MySQL.
-Crazy, but it works really well and I'm confident it will help a lot of business save a lot of money.
+Crazy, but it works really well and I'm confident it will help a lot of businesses save a lot of money.
 Here's why.
 
 <!--more-->
