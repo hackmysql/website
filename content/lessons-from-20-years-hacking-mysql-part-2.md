@@ -5,6 +5,8 @@ subtitle: "Philosophy"
 tags: ["mysql", "philosophy", "history", "business"]
 comments: true
 series: "20 Years Hacking MySQL"
+params:
+  description: "A relational database is more than a data bank: it's applied philosophy. The second and final part of lessons from 20 years hacking MySQL."
 ---
 
 A relational database is more than a data bank, it's a profound philosophical expression.

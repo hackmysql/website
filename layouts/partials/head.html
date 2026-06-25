@@ -23,4 +23,7 @@
   <link rel="canonical" href="{{ .Permalink | absLangURL }}">
   <link rel="alternate" href="{{ "index.xml" | absLangURL }}" type="application/rss+xml" title="{{ .Site.Title }}">
   <link rel="stylesheet" href="{{ "hackmysql.css" | absURL }}">
+{{- if .IsHome }}
+  <link rel="preload" href="/img/book/efficient-mysql-performance-cover.avif" as="image" type="image/avif">
+{{- end }}
 </head>

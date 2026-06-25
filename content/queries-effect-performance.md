@@ -6,6 +6,7 @@ aliases:
   - /post/queries-effect-performance/
 params:
   path: qrt
+  description: "Queries don't merely affect MySQL performance, they are the cause of it. When hardware is healthy, queries are responsible for performance, which means they can also fix it."
 ---
 
 Queries _effect_ database performance. That's not a typo: "effect" not "affect". The difference is not a word game but an important way to think about database performance.

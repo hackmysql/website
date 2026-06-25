@@ -4,6 +4,8 @@ date: "2025-05-15T06:47:00-07:00"
 title: "Learn MySQL Performance"
 tags: ["mysql"]
 comments: false
+params:
+  description: "A nine-step learning path through MySQL performance in the same order as Efficient MySQL Performance, designed to be the most efficient route to learn MySQL performance."
 ---
 
 Every year new cohorts of programmers, DBAs, managers, and more learn MySQL.

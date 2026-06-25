@@ -7,6 +7,7 @@ comments: true
 series: "20 Years Hacking MySQL"
 params:
   reverseSeries: true
+  description: "Reflections on 20 years hacking MySQL and software engineering."
 ---
 
 I vividly remember 2004 when I decided to specialize in MySQL because the year before I was homeless and living in my car.

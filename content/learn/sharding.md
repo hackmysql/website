@@ -58,21 +58,3 @@ Engineers have been scaling out MySQL for decades.
 ## Hack MySQL Articles
 
 {{< path-articles path="shard" >}}
-
-## Additional Resources
-
-At this point in the history of MySQL, one product and company have "won" MySQL sharding: [Vitess](https://vitess.io/) and [PlanetScale](https://planetscale.com/).
-
-If and when you need to shard MySQL, I strongly suggest you talk with PlanetScale.
-Normally, I don't recommend or endorse any for-profit companies (except Percona), but in this one case the risks are too high to advise manual sharding.
-There are several reasons why:
-
-* Sharding is relatively easy to program but _extremely difficult to operate correctly_
-* Sharding one application (at one company) almost never translates directly to other applications or companies
-* Sharding can (and probably will) create exponentially more work and risks
-
-Stories of developers and DBAs successfully sharding MySQL, like [Sharding Pinterest: How we scaled our MySQL fleet](https://medium.com/pinterest-engineering/sharding-pinterest-how-we-scaled-our-mysql-fleet-3f341e96ca6f), are interesting to read but it's important to realize: these are usually top-tier tech companies with MySQL experts on staff.
-Experts make it _look_ easy, but it's not.
-
-I always encourage you to become a MySQL expert.
-But I also always provide the best advice, which in this case is to talk with PlanetScale if and when you need to shard MySQL.

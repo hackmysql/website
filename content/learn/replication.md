@@ -66,10 +66,3 @@ Although replication decreases performance and lag is a risk, those costs are ca
 ## Hack MySQL Articles
 
 {{< path-articles path="repl" >}}
-
-## Additional Resources
-
-| Resource | Type | About |
-|----------|------|-------|
-|[Replication](https://dev.mysql.com/doc/refman/en/replication.html)|MySQL manual|The authoritative source for DBAs, perhaps too in-depth for programmers.|
-|[An Introduction to MySQL Replication: Exploring Different Types of MySQL Replication Solutions](https://www.percona.com/blog/overview-of-different-mysql-replication-solutions/) by Dimitri Vanoverbeke @ Percona|Article|A good overview of the MySQL replication landscape for developer.|

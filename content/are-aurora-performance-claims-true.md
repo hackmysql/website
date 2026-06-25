@@ -3,12 +3,12 @@ type: "page"
 date: "2023-05-12T09:38:00-04:00"
 title: "Are Aurora Performance Claims True?"
 tags: ["mysql", "aws", "aurora", "benchmarks"]
-type: "page"
 lastMod: "2024-06-04T13:36:00-04:00"
 aliases:
   - /post/are-aurora-performance-claims-true/
 params:
   path: cloud
+  description: "Amazon claims Aurora delivers \"Up to 5X the throughput of MySQL.\" Deep benchmarking digs past the marketing to find out if it's actually true."
 ---
 
 Amazon claims that Aurora has "Up to 5X the throughput of MySQL".

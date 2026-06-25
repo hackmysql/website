@@ -11,6 +11,7 @@ aliases:
 disqus_url: "https://hackmysql.com/post/infamous-order-by-limit-query-optimizer-bug/"
 params:
   path: index
+  description: "For 16 years the MySQL query optimizer has had a bug where LIMIT 1 can be slower than LIMIT 20 and even trigger a full table scan. Here's what's happening and why."
 ---
 
 Which is faster: `LIMIT 1` or `LIMIT 20`?

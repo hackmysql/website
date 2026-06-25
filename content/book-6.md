@@ -11,6 +11,7 @@ disqus_url: "https://hackmysql.com/post/book-6/"
 series: "Behind the Book"
 params:
   path: metrics
+  description: "InnoDB page flushing is one of MySQL's most complex internals. This post diagrams the whole process in one visual."
 ---
 
 Who dares diagram a system and process as complex as InnoDB page flushing?

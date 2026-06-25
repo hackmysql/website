@@ -3,6 +3,8 @@ date: "2020-12-28T09:56:00-05:00"
 title: "MySQL Password Rotation with AWS Secrets Manager and Lambda"
 tags: ["mysql", "aws", "aws-secrets-manager", "aws-lambda", "aws-s3", "terraform"]
 summary: "How to set up MySQL password rotation with AWS Secrets Manager, AWS Lambda, and Terraform"
+params:
+  description: "Automating MySQL password rotation at scale with AWS Secrets Manager, Lambda, and Terraform is far more complex than it appears. Here's a detailed guide that covers all of it."
 ---
 
 MySQL password rotation using [Amazon RDS for MySQL](https://aws.amazon.com/rds/mysql/), [AWS Secrets Manager](https://aws.amazon.com/secrets-manager/), and [AWS Lambda](https://aws.amazon.com/lambda/) is a complex challenge to automate at scale. It appears easy at first&mdash;just two services and some IAM resources, right? But actual implementation quickly reveals a significant depth of considerations, choices, trade-offs, and technical problems. This page is a detailed guide to implementing MySQL 5.7 password rotation&mdash;fully automated at scale&mdash;using AWS RDS, Secrets Manager, and Lambda, and [Terraform](https://www.terraform.io/) for cloud infrastructure.

@@ -6,6 +6,8 @@ comments: true
 aliases:
   - /post/query-metrics-requirements-for-mysql/
 disqus_url: "https://hackmysql.com/post/query-metrics-requirements-for-mysql/"
+params:
+  description: "What does a production-ready query metrics system actually need?"
 ---
 
 Let's answer a question which, to my knowledge, has never been systematically addressed: _What are the requirements for a production-ready query metrics app at scale?_ I am uniquely qualified to answer that because I have written four query metrics apps, two of which are the open-source standard for MySQL: [pt-query-digest](https://www.percona.com/doc/percona-toolkit/LATEST/pt-query-digest.html) and the original (v1) code behind the query metrics/analysis part of [Percona Monitoring and Management](https://www.percona.com/software/database-tools/percona-monitoring-and-management). I've also published a couple of packages related to query metrics: [go-mysql/slowlog](https://github.com/go-mysql/slowlog) and [go-mysql/query](https://github.com/go-mysql/query).

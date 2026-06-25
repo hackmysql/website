@@ -9,6 +9,7 @@ aliases:
 disqus_url: "https://hackmysql.com/post/mysql-iops-for-reads-and-surprsies/"
 params:
   path: data
+  description: "MySQL I/O tuning focuses almost entirely on writes, but read IOPS and a few surprising I/O behaviors are worth understanding too."
 ---
 
 When you think about IOPS, you probably think about writes because MySQL write I/O has a long tradition of optimization, benchmarking, new algorithms, new storage engines, and so forth.

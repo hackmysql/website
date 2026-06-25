@@ -48,10 +48,3 @@ After all, the cloud is nothing special: behind the proverbial curtain, it’s p
 ## Hack MySQL Articles
 
 {{< path-articles path="cloud" >}}
-
-## Additional Resources
-
-| Resource | Type | About |
-|----------|------|-------|
-| [Which Cloud Provider Performs Better for My MySQL Workload?](https://www.percona.com/blog/which-cloud-provider-performs-better-for-my-mysql-workload/) by Ananias Tsalouchidis @ Percona|Article|It's important to read as many independent cloud benchmarks and comparisons as possible, like this one|
-| [Maximizing Performance of AWS RDS for MySQL with Dedicated Log Volumes](https://www.percona.com/blog/maximizing-performance-of-aws-rds-for-mysql-with-dedicated-log-volumes/) by Kedar Vaijanapurkar @ Percona|Article|It's also important to learn about new cloud features because the vendors do make improvements, like this one|

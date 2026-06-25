@@ -11,6 +11,7 @@ disqus_url: "https://hackmysql.com/post/book-4/"
 series: "Behind the Book"
 params:
   path: data
+  description: "Access patterns are talked about constantly but rarely enumerated. This post catalogues the specific ways applications access MySQL and why each one matters for performance."
 ---
 
 Access patterns intrigue me because it seems that everyone knows what they are and talks about them, but there's also very little written about them&mdash;in MySQL literature, at least.

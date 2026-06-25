@@ -3,6 +3,8 @@ date: "2025-12-12T16:39:00-05:00"
 title: "mlrd: DynamoDB-Compatible API on MySQL"
 tags: ["mysql", "mlrd"]
 comments: true
+params:
+  description: "mlrd (\"mallard\") is a DynamoDB-compatible API that runs on MySQL."
 ---
 
 Introducing [`mlrd`](https://mlrd.tech/) ("mallard") to the world: a DynamoDB-compatible API on MySQL.

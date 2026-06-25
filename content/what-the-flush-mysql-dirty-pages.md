@@ -9,6 +9,7 @@ aliases:
 disqus_url: "https://hackmysql.com/post/what-the-flush-mysql-dirty-pages/"
 params:
   path: metrics
+  description: "A technical deep dive into InnoDB dirty page flushing: what it is, what controls it, and why tuning it matters for consistent MySQL write performance."
 ---
 
 Yves Trudeau and Francisco Bordenave, MySQL experts at Percona, recently published a three-part post:

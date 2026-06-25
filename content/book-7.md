@@ -9,6 +9,8 @@ aliases:
   - /post/book-7/
 disqus_url: "https://hackmysql.com/post/book-7/"
 series: "Behind the Book"
+params:
+  description: "Heartbeat tables have measured MySQL replication lag for over a decade, but with multi-threaded replication (MTR) the approach has limitations. Can we do better?"
 ---
 
 We've been measuring MySQL replication lag with heartbeats for more than a decade.

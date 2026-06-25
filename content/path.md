@@ -75,9 +75,3 @@ Hack MySQL Articles
 : Pages on this website related to the topic.
 These pages are unordered and vary in technical depth.
 They don't teach the topic, they supplement it with special information not found elsewhere.
-
-Additional Resources
-: Other books, blogs, videos, and so forth related to the topic.
-These resources are curated: they're accurate and from credible sources.
-If there's a relevant section in the MySQL manual, it's listed first.
-Like the pages on this website, these resources don't teach the topic, they supplement it.

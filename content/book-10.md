@@ -11,6 +11,7 @@ disqus_url: "https://hackmysql.com/post/book-10/"
 series: "Behind the Book"
 params:
   path: cloud
+  description: "Cloud MySQL changes the DBA role but doesn't end it, and the implications for software engineers using (not managing) MySQL are significant."
 ---
 
 No, I don't think so.

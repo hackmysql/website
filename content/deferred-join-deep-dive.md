@@ -9,6 +9,7 @@ aliases:
 disqus_url: "https://hackmysql.com/post/deferred-join-deep-dive/"
 params:
   path: data
+  description: "Deferred join is an SQL rewrite that can make a paginated query 2x faster or more, but it's widely misunderstood. This deep dive shows exactly how and why it works."
 ---
 
 Deferred join is powerful.

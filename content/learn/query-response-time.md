@@ -66,16 +66,3 @@ Query response time comprises many stages (steps during query execution) and wai
 ## Hack MySQL Articles
 
 {{< path-articles path="qrt" >}}
-
-## Additional Resources
-
-| Resource | Type | About |
-|----------|------|-------|
-|[The Slow Query Log](https://dev.mysql.com/doc/refman/en/slow-query-log.html)|MySQL manual|Sparse for programmers but necessary for DBAs to read.|
-|[Identifying and profiling problematic MySQL queries](https://planetscale.com/blog/identifying-and-profiling-problematic-mysql-queries) by Benjamin Dicken @ PlanetScale | Article | Excellent article on using Performance Schema to identify slow queries. Although this approach is manual (one typically uses a tool), it's good to know (and necessary to know if you're a DBA). |
-|[_MySQL 8 Query Performance Tuning: A Systematic Method for Improving Execution Speeds_](https://www.amazon.com/MySQL-Query-Performance-Tuning-Systematic/dp/1484255836/) by Jesper Wisborg Krogh|Book|At over 900 pages, it might be more of a reference than a read. Part of the length is due to covering topics beyond what the title suggests ("Chapter 26. Replication", for example). Focus on the query performance turning parts and it's worth reading.|
-|[pt-query-digest](https://docs.percona.com/percona-toolkit/pt-query-digest.html) @ Percona | Open source tool | The most venerable and widely-used tool for analyzing the MySQL slow query log. |
-|[Deep Dive SQL Workload Analysis using pt-query-digest](https://severalnines.com/blog/deep-dive-sql-workload-analysis-using-pt-query-digest/) @ Severalnines | Article | Exactly what the article title says. Although originally publish in 2015, this article was updated in 20222 and is still valid. |
-|[Deep Dive into MySQL Query Performance](https://archive.fosdem.org/2023/schedule/event/deep_dive_mysql_perf/) by Peter Zaitsev @ FOSDEM 2023 | Conference presentation | Peter Zaitsev is a renowned MySQL expert. All his presentations are worth watching.|
-|[Rows Examined Blindspot when Looking for non-Existing Data](https://jfg-mysql.blogspot.com/2023/06/rows-examined-blindspot-when-looking-for-non-existing-data.html) by Jean-François Gagné | Article | Good to know article about the `Rows_examined` query metric. |
-|[Rows Examined not Trustworthy because of Index Condition Pushdown](https://jfg-mysql.blogspot.com/2022/03/rows-examined-not-trustworthy-because-index-condition-pushdown.html) by Jean-François Gagné  | Article | Another interesting article about the `Rows_examined` query metric. |

@@ -5,6 +5,8 @@ title: "Announcing Blip: A New MySQL Monitor"
 tags: ["blip", "mysql", "monitoring"]
 aliases:
   - /post/announcing-blip-mysql-monitor/
+params:
+  description: "Blip is a new MySQL monitor that rethinks metrics collection from the ground up, solving problems that existing open-source monitors don't address."
 ---
 
 <a href="https://github.com/cashapp/blip" target="_blank">Blip</a> is a new MySQL monitor that collects and reports server metrics.

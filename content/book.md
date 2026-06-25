@@ -2,6 +2,8 @@
 date: "2024-11-09T14:27:00-05:00"
 title: "Efficient MySQL Performance In 10 Sentences"
 tags: ["mysql", "book"]
+params:
+  description: "All 10 chapters of Efficient MySQL Performance, from \"Performance is query response time\" to the final chapter, each distilled to a single sentence."
 ---
 
 Don't have time to read [_Efficient MySQL Performance_](https://oreil.ly/efficient-mysql-performance)?

@@ -79,13 +79,3 @@ For years, nobody noticed because response time was always great. Why? Good inde
 ## Hack MySQL Articles
 
 {{< path-articles path="index" >}}
-
-## Additional Resources
-
-| Resource | Type | About |
-|----------|------|-------|
-|[Optimization and Indexes](https://dev.mysql.com/doc/refman/en/optimization-indexes.html)|MySQL manual|Foundational knowledge. Must read.|
-|[Understanding the Query Execution Plan](https://dev.mysql.com/doc/refman/en/execution-plan-information.html)|MySQL manual|Foundational knowledge. Must read.|
-|[Introduction to indexes](https://planetscale.com/learn/courses/mysql-for-developers/indexes/introduction-to-indexes) @ PlanetScale | Vidoes | Fantastic series of videos. Must watch. |
-|[B-trees and database indexes](https://planetscale.com/blog/btrees-and-database-indexes) by Benjamin Dicken @ PlanetScale | Article | Fantastic article about B-tree indexes. Must read. |
-|[_Database Internals_](https://www.databass.dev/) by Alex Petrov|Book|Fantastic book that provides deep, technical knowledge&mdash;including how B-tree indexes are implemented. Not written for MySQL but directly applicable to MySQL.|

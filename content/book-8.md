@@ -11,6 +11,7 @@ disqus_url: "https://hackmysql.com/post/book-8/"
 series: "Behind the Book"
 params:
   path: trx
+  description: "The Performance Schema holds a rich history of transaction execution: query timings, idle gaps, and more. This post shows how to mine it for a transaction report MySQL tooling doesn't provide."
 ---
 
 The MySQL [Performance Schema](https://dev.mysql.com/doc/refman/8.0/en/performance-schema.html) is a gold mine of valuable data.

@@ -8,6 +8,7 @@ aliases:
   - /selectandsort
 params:
   path: metrics
+  description: "MySQL Select% and Sort% status variables are ancient diagnostics that remain essential for understanding query performance. This is the updated guide for MySQL 8.0."
 ---
 
 This page is a reboot of the original written 15 years ago in 2005.

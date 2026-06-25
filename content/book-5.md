@@ -12,6 +12,7 @@ disqus_url: "https://hackmysql.com/post/book-5/"
 series: "Behind the Book"
 params:
   path: shard
+  description: "Sharding MySQL is a last resort, not a first move. Let's look at why engineers reach for sharding prematurely and what to try instead."
 ---
 
 Chapter 5 of [_Efficient MySQL Performance_](https://oreil.ly/efficient-mysql-performance) addresses sharding, and it was difficult to write but not for technical reasons.

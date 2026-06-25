@@ -7,6 +7,8 @@ comments: true
 aliases:
   - /post/mysql-gtid-missing-writes/
 disqus_url: "https://hackmysql.com/post/mysql-gtid-missing-writes/"
+params:
+  description: "GTID auto-positioning makes failover feel safe, but it can silently accept a replica that missed writes from a crashed primary. Here's how to detect the data loss."
 ---
 
 [GTID-based replication](https://dev.mysql.com/doc/refman/8.0/en/replication-gtids.html) makes managing replication topology easy: just [CHANGE MASTER](https://dev.mysql.com/doc/refman/8.0/en/change-master-to.html) to any node and voilà. It [doesn't always work]({{< ref "fixing-ghosted-gtids.md " >}}), but for the most part it does. That's great, but it can hide a serious problem: missing writes. Even when MySQL GTID-based replication says, "OK, sure!", which is most of the time, you should double check it.

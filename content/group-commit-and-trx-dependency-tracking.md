@@ -8,6 +8,7 @@ comments: true
 series: "Replication Lag"
 params:
   path: repl
+  description: "Part 1 of 3: understanding binary log group commit and transaction dependency tracking, the foundation for how multi-threaded replication works in MySQL 8.0."
 ---
 
 MySQL 8.0 and newer change and improve how we measure and monitor replication lag.

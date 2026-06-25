@@ -8,6 +8,7 @@ aliases:
 disqus_url: "https://hackmysql.com/post/when-commit-is-the-slowest-query/"
 params:
   path: qrt
+  description: "When COMMIT appears as your slowest query, the root cause is almost always slow storage. Here's how to confirm it and what to do about it."
 ---
 
 When `COMMIT` is the slowest query, it means your storage is slow.

@@ -10,6 +10,7 @@ disqus_url: "https://hackmysql.com/post/book-0/"
 series: "Behind the Book"
 params:
   zeroIndex: true
+  description: "After 17 years with MySQL, I wrote a book unlike any MySQL book before, focused on what actually matters for engineers, not DBAs."
 ---
 
 After 17 years with MySQL, I wrote a book: [_Efficient MySQL Performance_](https://oreil.ly/efficient-mysql-performance).

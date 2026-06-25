@@ -87,16 +87,3 @@ Long story short: MySQL metrics and what they really mean are not self-evident.
 ## Hack MySQL Articles
 
 {{< path-articles path="metrics" >}}
-
-## Additional Resources
-
-<div class="note">
-<b>Comprehensive Guide</b><br> 
-If you're serious about learning this topic, you must read chapter 6 of <a href="https://www.amazon.com/Efficient-MySQL-Performance-Practices-Techniques/dp/1098105095/"><i>Efficient MySQL Performance</i></a>.
-Even as of May 2025, it's still the only resource that explains all important MySQL server and InnoDB metrics <i>in depth</i>.
-The Hack MySQL articles above are a small sample that demonstrate how much there is to learn and how deep the topic goes.
-</div>
-
-| Resource | Type | About |
-|----------|------|-------|
-|[Server Status Variables](https://dev.mysql.com/doc/refman/en/server-status-variables.html)|MySQL manual|The official but often terse description of MySQL server status variables. More of a reference than a guide to understanding them. There are more sources of metrics, but this is the main source.|

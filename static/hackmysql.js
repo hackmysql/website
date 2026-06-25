@@ -1,21 +1,8 @@
-function m(id) {
-	closeMenus(id);
-	document.getElementById(id).classList.toggle("drop");
-	document.getElementById(id+"Menu").classList.toggle("show");
-}
-function closeMenus(notId) {
-	var m = document.getElementsByClassName("submenu");
-	for (i = 0; i < m.length; i++) {
-		if (m[i].id == notId+"Menu")
-			continue
-		m[i].classList.remove('show');
-	}
-	var m = document.getElementsByClassName("menuButton");
-	for (i = 0; i < m.length; i++) {
-		if (m[i].id == notId)
-			continue
-		m[i].classList.remove('drop');
-	}
+function artSort(btn, showId, hideId) {
+	document.getElementById(showId).style.display = '';
+	document.getElementById(hideId).style.display = 'none';
+	btn.parentElement.querySelectorAll('.art-btn').forEach(function(b) { b.classList.remove('active'); });
+	btn.classList.add('active');
 }
 function zen() {
 	document.getElementById("bird").classList.toggle('hide');
@@ -24,4 +11,3 @@ function zen() {
 	document.getElementById("focus").classList.toggle('zen');
 	document.querySelector('article').classList.toggle('noborder');
 }
-window.onclick = function(e) { if (!e.target.matches('.menuButton')) closeMenus() }

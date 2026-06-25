@@ -7,6 +7,7 @@ aliases:
   - /post/mysql-data-locks-mapping-80-to-57/
 params:
   path: trx
+  description: "MySQL 8.0 moved data lock information to performance_schema.data_locks. A visual mapping shows how the new output corresponds to what used to be buried in SHOW ENGINE INNODB STATUS."
 ---
 
 As of MySQL 8.0, [`performance_schema.data_locks`](https://dev.mysql.com/doc/refman/8.0/en/performance-schema-data-locks-table.html) shows InnoDB data locks.

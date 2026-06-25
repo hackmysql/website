@@ -8,6 +8,7 @@ aliases:
 disqus_url: "https://hackmysql.com/post/why-mysql-replication-is-fast/"
 params:
   path: repl
+  description: "Replication lag gets all the attention, but MySQL replication is actually remarkably fast. A controlled experiment with Performance Schema and binary log inspection shows exactly why."
 ---
 
 Replication being slow&mdash;replication lag&mdash;is a common complaint, but MySQL replication is actually really fast.

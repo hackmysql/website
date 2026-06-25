@@ -60,11 +60,3 @@ stalled transactions (superfluous waits between queries); abandoned transactions
 ## Hack MySQL Articles
 
 {{< path-articles path="trx" >}}
-
-## Additional Resources
-
-| Resource | Type | About |
-|----------|------|-------|
-|[InnoDB Locking and Transaction Model](https://dev.mysql.com/doc/refman/en/innodb-locking-transaction-model.html)|MySQL manual|Foundational knowledge. Must read.|
-|[_MySQL Concurrency: Locking and Transactions for MySQL Developers and DBAs_](https://www.amazon.com/MySQL-Concurrency-Locking-Transactions-Developers/dp/148426651X) by Jesper Wisborg Krogh|Book|Locking and transaction are such deep topics they could fill a book, and they do.|
-|&bull;&nbsp;[InnoDB Data Locking - Part 1 "Introduction"](https://dev.mysql.com/blog-archive/innodb-data-locking-part-1-introduction/)<br>&bull;&nbsp;[InnoDB Data Locking - Part 2 "Locks"](https://dev.mysql.com/blog-archive/innodb-data-locking-part-2-locks/)<br>&bull;&nbsp;[InnoDB Data Locking - Part 2.5 "Locks" (Deeper Dive)](https://dev.mysql.com/blog-archive/innodb-data-locking-part-2-5-locks-deeper-dive/)<br>&bull;&nbsp;[InnoDB Data Locking - Part 3 "Deadlocks"](https://dev.mysql.com/blog-archive/innodb-data-locking-part-3-deadlocks/)<br>&bull;&nbsp;[InnoDB Data Locking - Part 4 "Scheduling"](https://dev.mysql.com/blog-archive/innodb-data-locking-part-4-scheduling/)<br>&bull;&nbsp;[InnoDB Data Locking - Part 5 "Concurrent Queues"](https://dev.mysql.com/blog-archive/innodb-data-locking-part-5-concurrent-queues/)<br>by Jakub Łopuszański @ Oracle|Article series|One of the most comprehensive, technical explanation of InnoDB data locking. Written by a MySQL server developer.|

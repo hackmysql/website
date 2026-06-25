@@ -10,6 +10,7 @@ aliases:
   - /trx
 params:
   path: trx
+  description: "MySQL transactions are important but almost nobody monitors them. This post explores what the Performance Schema makes possible and why transaction reporting tooling barely exists."
 ---
 
 In chapter 8 of [_Efficient MySQL Performance_](https://oreil.ly/efficient-mysql-performance), I discuss reporting MySQL transactions (among many other related topics).

@@ -5,6 +5,8 @@ title: "Blip: A New Open Source MySQL Metrics Collector"
 tags: ["mysql", "metrics", "monitoring", "blip"]
 aliases:
   - /post/blip-v1.0.0-released/
+params:
+  description: "Blip v1.0.0 ships: an open-source MySQL metrics collector purpose-built from the ground up to be the last and greatest MySQL monitor ever."
 ---
 
 [Blip](https://github.com/cashapp/blip) is a new open source MySQL metrics collector, or "MySQL monitor" for short.

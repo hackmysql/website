@@ -1,32 +1,74 @@
 {{ define "main" }}
 <main class="home">
 	<div class="books">
-		<div class="my-book">
-			<div class="my-book-cover">
-				<img class="my-book-cover" width="300" height="396" src="/img/book/efficient-mysql-performance-cover.jpg" alt="Efficient MySQL Performance book cover">
+		<h1>Learn MySQL Performance</h1>
+		<div id="b1">
+			<p><i>Efficient MySQL Performance</i> distills 20 years of MySQL expertise into 344 pages. Written for software developers, not DBAs, it's easy to digest even if you're new to MySQL.</p>
+			<p>The nine-step path below is an efficient way through the jungle of MySQL performance topics. Avoid pitfalls! Learn these topics in this order, which is (not coincidentally) the same order as chapters in the book.</p>
+		</div>
+		<div id="bs">
+			<div id="bl">
+				{{ partial "path.html" . }}
 			</div>
-			<div class="book-links">
-				<a class="book-button" data-dst="oreilly" href="https://oreil.ly/efficient-mysql-performance">O'Reilly&nbsp;&Rang;</a>
-				<a class="book-button" data-dst="amazon" href="https://www.amazon.com/Efficient-MySQL-Performance-Practices-Techniques/dp/1098105095/">Amazon&nbsp;&Rang;</a>
-				<a class="book-button"  data-dst="goodreads" href="https://www.goodreads.com/book/show/59963702-efficient-mysql-performance">Goodreads&nbsp;&Rang;</a>
-			</div>
-			<div class="my-book-desc">
-				<p>"Daniel does a great job of showing how to drive to the <mark>fastest resolution</mark> without getting lost in guesswork. He also covers InnoDB row locking in a detailed yet digestible form."<br>—Vadim Tkachenko, CTO, Percona</p>
-
-				<p>"This book is different from other MySQL books—it focuses on what matters most: query response time. A <mark>must-have</mark> for MySQL users!"<br>—Frédéric Descamps, MySQL Community Manager, Oracle Belgium</p>
-
-				<p>"Hands down [the] <mark>best technical book I've ever read</mark>, and I've been working in this field for close to 30 years."<br>—Adam (<a href="https://www.amazon.com/Efficient-MySQL-Performance-Practices-Techniques/dp/1098105095/#customerReviews">verified Amazon review</a>)
-				<p><mark>Extremely well written and accessible</mark>&nbsp;—<a href="https://www.reddit.com/r/mysql/comments/1hk729x/mysql_book_high_performance_mysql_vs_efficient/">reddit comment</a></p>
+			<div id="br">
+				<img class="my-book-cover" width="500" height="661" src="/img/book/efficient-mysql-performance-cover.avif" alt="Efficient MySQL Performance book cover">
+				<div class="book-links">
+					<a class="book-button" data-dst="oreilly" href="https://oreil.ly/efficient-mysql-performance">O'Reilly&nbsp;&Rang;</a>
+					<a class="book-button" data-dst="amazon" href="https://www.amazon.com/Efficient-MySQL-Performance-Practices-Techniques/dp/1098105095/">Amazon&nbsp;&Rang;</a>
+					<a class="book-button" data-dst="goodreads" href="https://www.goodreads.com/book/show/59963702-efficient-mysql-performance">Goodreads&nbsp;&Rang;</a>
+				</div>
 			</div>
 		</div>
+		<div class="my-book-desc">
+			<p>"Daniel does a great job of showing how to drive to the <mark>fastest resolution</mark> without getting lost in guesswork. He also covers InnoDB row locking in a detailed yet digestible form."<br>—Vadim Tkachenko, CTO, Percona</p>
+			<p>"This book is different from other MySQL books—it focuses on what matters most: query response time. A <mark>must-have</mark> for MySQL users!"<br>—Frédéric Descamps, MySQL Community Manager, Oracle Belgium</p>
+			<p>"Hands down [the] <mark>best technical book I've ever read</mark>, and I've been working in this field for close to 30 years."<br>—Adam (<a href="https://www.amazon.com/Efficient-MySQL-Performance-Practices-Techniques/dp/1098105095/#customerReviews">verified Amazon review</a>)</p>
+			<p><mark>Extremely well written and accessible</mark>&nbsp;—<a href="https://www.reddit.com/r/mysql/comments/1hk729x/mysql_book_high_performance_mysql_vs_efficient/">reddit comment</a></p>
+		</div>
 	</div>
-	<div class="learn">
-		<h1>Learn MySQL Performance</h1>
-		<p>👈 Read the book or follow the path 👇 to learn how to make MySQL performance 🙌 for your application. Do both for 🤯 MySQL performance!</p>
-		<p><i>Efficient MySQL Performance</i> distills 20 years of MySQL expertise into 344 pages. Written for software developers, not DBAs, it's easy to digest even if you're new to MySQL.</p>
-		<p>The path below is an efficient way through the jungle of MySQL performance topics. Avoid pitfalls! Learn these topics in this order.</p>
-		{{ partial "path.html" . }}
-		<p>What's the difference? The book is a map <i>and</i> a local guide to teach you along the way. The path is just a map. <a href="/path">Learn more about the path</a>.</p>
+	<div class="articles">
+		<div class="art-header">
+			<h1>MySQL Articles</h1>
+			<div class="art-tabs">
+				<button class="art-btn active" onclick="artSort(this,'art-popular','art-recent')">Popular</button>
+				<button class="art-btn" onclick="artSort(this,'art-recent','art-popular')">Newest</button>
+			</div>
+		</div>
+		{{ $views := hugo.Data.pageviews }}
+		{{ $allPages := where .Site.RegularPages "Params.tags" "intersect" (slice "mysql") }}
+		{{ $articles := where $allPages ".Type" "ne" "path" }}
+		<div id="art-popular" class="art-list">
+			{{ $pairs := slice }}
+			{{ range $articles }}
+				{{ $v := 0.0 }}
+				{{ with index $views .RelPermalink }}{{ $v = . }}{{ end }}
+				{{ $pairs = $pairs | append (dict "v" $v "p" .) }}
+			{{ end }}
+			{{ range sort $pairs "v" "desc" }}
+				{{ $p := .p }}
+				{{ with .p.Params.description }}
+				<a class="art-card" href="{{ $p.RelPermalink }}">
+					<div class="art-card-title">{{ $p.Title }}</div>
+					<div class="art-card-desc">{{ . }}</div>
+				</a>
+				{{ else }}
+				<div class="art-item"><a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a></div>
+				{{ end }}
+			{{ end }}
+		</div>
+		<div id="art-recent" class="art-list" style="display:none">
+			{{ range $articles.ByDate.Reverse }}
+				{{ $p := . }}
+				{{ with .Params.description }}
+				<a class="art-card" href="{{ $p.RelPermalink }}">
+					<div class="art-card-title">{{ $p.Title }}</div>
+					<div class="art-card-desc">{{ . }}</div>
+				</a>
+				{{ else }}
+				<div class="art-item"><span class="art-date">{{ $p.Date.Format "2006-01-02" }}</span> <a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a></div>
+				{{ end }}
+			{{ end }}
+		</div>
 	</div>
 </main>
 {{ end }}

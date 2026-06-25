@@ -6,6 +6,7 @@ comments: true
 series: "Replication Lag"
 params:
   path: repl
+  description: "With multi-threaded replication, Seconds_Behind_Source is no longer a reliable lag metric. Part 1 of a 3-part series on monitoring lag correctly with Performance Schema tables."
 ---
 
 Used to be that replication lag was as simple as `Seconds_Behind_Master` (renamed to `Seconds_Behind_Source`). 

@@ -9,6 +9,7 @@ aliases:
 disqus_url: "https://hackmysql.com/post/future-of-mysql-schema-change-spirit/"
 params:
   path: common
+  description: "Spirit is a new online schema change tool by MySQL expert Morgan Tocker, built to improve on both pt-online-schema-change and gh-ost in speed and safety."
 ---
 
 Using pt-online-schema or gh-ost?

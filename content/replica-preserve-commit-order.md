@@ -7,6 +7,7 @@ comments: true
 series: "Replication Lag"
 params:
   path: repl
+  description: "replica_preserve_commit_order determines whether a replica commits transactions in source order under multi-threaded replication, with consequences for how lag is measured."
 ---
 
 With multi-threaded replication (MTR), a replica can commit transactions in the same order as the source, or not.
@@ -209,7 +210,7 @@ This is safer&mdash;the replica is never in a state not observed on the source&m
 TL;DR: `replica_preserve_commit_order = ON` does not decrease replication throughput in my benchmarks.
 It's `replica_parallel_workers` that significantly improves performance: more workers, more throughput.&dagger;
 
-&dagger; All the usual caveats of [benchmarks]({{< ref "eng/benchmarking" >}}) apply, so real-world replicas will exhibit different performance characteristics.
+&dagger; All the usual caveats of benchmarks apply, so real-world replicas will exhibit different performance characteristics.
 
 Here's how I tested the performance effects of replica preserve commit order:
 

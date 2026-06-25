@@ -111,11 +111,3 @@ After many years with MySQL, hundreds of different applications, and thousands o
 ## Hack MySQL Articles
 
 {{< path-articles path="data" >}}
-
-## Additional Resources
-
-| Resource | Type | About |
-|----------|------|-------|
-|[Data Types](https://dev.mysql.com/doc/refman/en/data-types.html)|MySQL manual|Common knowledge for developers, but necessary to have a complete understanding of all MySQL data types.|
-|[Optimizing InnoDB Disk I/O](https://dev.mysql.com/doc/refman/en/optimizing-innodb-diskio.html)|MySQL manual|Advanced and low-level. More suitable for DBAs than developers.|
-|[Configuring InnoDB I/O Capacity](https://dev.mysql.com/doc/refman/en/innodb-configuring-io-capacity.html)|MySQL manual|Even more advanced and low-level. Not typically something developers need to know, but definitely something DBAs need to know.|

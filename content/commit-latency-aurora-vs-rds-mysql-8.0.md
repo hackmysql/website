@@ -10,6 +10,7 @@ aliases:
 disqus_url: "https://hackmysql.com/post/commit-latency-aurora-vs-rds-mysql-8.0/"
 params:
   path: cloud
+  description: "COMMIT is when MySQL pays the storage latency cost to make writes durable. Benchmarking Aurora v2, Aurora v3, and RDS MySQL 8.0 reveals how much that cost differs across AWS managed databases."
 ---
 
 Let's examine `COMMIT` latency on Aurora v2 (MySQL 5.7) vs. Aurora v3 (MySQL 8.0) vs. RDS MySQL 8.0 2-AZ vs. RDS MySQL 8.0 3-AZ "cluster".
