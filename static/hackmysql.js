@@ -1,6 +1,6 @@
 function artSort(btn, showId, hideId) {
-	document.getElementById(showId).style.display = '';
-	document.getElementById(hideId).style.display = 'none';
+	document.getElementById(showId).style.removeProperty('display');
+	document.getElementById(hideId).style.setProperty('display', 'none', 'important');
 	btn.parentElement.querySelectorAll('.art-btn').forEach(function(b) { b.classList.remove('active'); });
 	btn.classList.add('active');
 }

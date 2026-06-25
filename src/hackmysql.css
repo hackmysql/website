@@ -335,7 +335,8 @@ div.scroller {
 }
 .art-card:hover { border-color: var(--border); text-decoration: none; color: inherit; }
 .art-card-title { font-weight: bold; font-size: 0.9rem; color: var(--a); }
-.art-card:hover .art-card-title { text-decoration: underline; }
+.art-card a { text-decoration: none; }
+.art-card a:hover { text-decoration: underline; color: var(--a); }
 .art-card-desc { font-size: 0.8rem; color: light-dark(#444, #aaa); margin-top: 0.2rem; line-height: 1.4; }
 .art-item { font-size: 0.9rem; line-height: 1.8; padding-left: 0.2rem; }
 .art-date { color: #888; font-size: 0.78rem; white-space: nowrap; }
