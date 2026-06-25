@@ -13,9 +13,9 @@
 			<div id="br">
 				<img class="my-book-cover" width="500" height="661" fetchpriority="high" src="/img/book/efficient-mysql-performance-cover.avif" alt="Efficient MySQL Performance book cover">
 				<div class="book-links">
-					<a class="book-button" data-dst="oreilly" href="https://oreil.ly/efficient-mysql-performance">O'Reilly&nbsp;&Rang;</a>
-					<a class="book-button" data-dst="amazon" href="https://www.amazon.com/Efficient-MySQL-Performance-Practices-Techniques/dp/1098105095/">Amazon&nbsp;&Rang;</a>
-					<a class="book-button" data-dst="goodreads" href="https://www.goodreads.com/book/show/59963702-efficient-mysql-performance">Goodreads&nbsp;&Rang;</a>
+					<a class="book-button" data-dst="oreilly" aria-label="Buy Efficient MySQL Performance on O'Reilly" href="https://oreil.ly/efficient-mysql-performance">O'Reilly&nbsp;&Rang;</a>
+					<a class="book-button" data-dst="amazon" aria-label="Buy Efficient MySQL Performance on Amazon" href="https://www.amazon.com/Efficient-MySQL-Performance-Practices-Techniques/dp/1098105095/">Amazon&nbsp;&Rang;</a>
+					<a class="book-button" data-dst="goodreads" aria-label="Buy Efficient MySQL Performance on Goodreads" href="https://www.goodreads.com/book/show/59963702-efficient-mysql-performance">Goodreads&nbsp;&Rang;</a>
 				</div>
 			</div>
 		</div>
@@ -26,18 +26,12 @@
 			<p><mark>Extremely well written and accessible</mark>&nbsp;—<a href="https://www.reddit.com/r/mysql/comments/1hk729x/mysql_book_high_performance_mysql_vs_efficient/">reddit comment</a></p>
 		</div>
 	</div>
-	<div class="articles">
-		<div class="art-header">
-			<h1>MySQL Articles</h1>
-			<div class="art-tabs">
-				<button class="art-btn active" onclick="artSort(this,'art-popular','art-recent')">Popular</button>
-				<button class="art-btn" onclick="artSort(this,'art-recent','art-popular')">Newest</button>
-			</div>
-		</div>
+	<div>
+		<h1>MySQL Articles</h1>
 		{{ $views := hugo.Data.pageviews }}
 		{{ $allPages := where .Site.RegularPages "Params.tags" "intersect" (slice "mysql") }}
 		{{ $articles := where $allPages ".Type" "ne" "path" }}
-		<div id="art-popular" class="art-list">
+		<div style="margin-top: 1em">
 			{{ $pairs := slice }}
 			{{ range $articles }}
 				{{ $v := 0.0 }}
@@ -47,25 +41,12 @@
 			{{ range sort $pairs "v" "desc" }}
 				{{ $p := .p }}
 				{{ with .p.Params.description }}
-				<div class="art-card">
-					<a class="art-card-title" href="{{ $p.RelPermalink }}">{{ $p.Title }}</a>
-					<div class="art-card-desc">{{ . }}</div>
+				<div class="pc">
+					<a class="pc-title" href="{{ $p.RelPermalink }}">{{ $p.Title }}</a>
+					<div class="pc-desc">{{ . }}</div>
 				</div>
 				{{ else }}
-				<div class="art-item"><a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a></div>
-				{{ end }}
-			{{ end }}
-		</div>
-		<div id="art-recent" class="art-list" style="display:none">
-			{{ range $articles.ByDate.Reverse }}
-				{{ $p := . }}
-				{{ with .Params.description }}
-				<div class="art-card">
-					<a class="art-card-title" href="{{ $p.RelPermalink }}">{{ $p.Title }}</a>
-					<div class="art-card-desc">{{ . }}</div>
-				</div>
-				{{ else }}
-				<div class="art-item"><span class="art-date">{{ $p.Date.Format "2006-01-02" }}</span> <a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a></div>
+				<div class="pc-item"><a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a></div>
 				{{ end }}
 			{{ end }}
 		</div>
