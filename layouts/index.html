@@ -43,10 +43,8 @@
 				{{ with .p.Params.description }}
 				<div class="pc">
 					<a class="pc-title" href="{{ $p.RelPermalink }}">{{ $p.Title }}</a>
-					<div class="pc-desc">{{ . }}</div>
+					<p>{{ . }}</p>
 				</div>
-				{{ else }}
-				<div class="pc-item"><a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a></div>
 				{{ end }}
 			{{ end }}
 		</div>
